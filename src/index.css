@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,700&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'DIGITAL-7';
+  src: url("/src/assets/fonts/DigitalNumbers-Regular.ttf");
+}
+
+
+@theme {
+    --font-header: "Volkhov", "sans-serif";
+    --font-body: "Poppins", "sans-serif";
+    --font-digital: "DIGITAL-7", "sans-serif";
+
+    --color-primary: #8A8A8A;
+    --color-secondary: #484848;
+    --color-secondary-deep: #8A8A8A;
+    --color-accent: #FB00B5;
+    --color-accent-light: #F77300;
+    --color-header-bg: #E0E0E0;
+    --color-black: #000;
+    --color-white: #fff;
+    --color-border: #DBDBDB;
+    --color-linear-bg: #fafafa;
+    
+    /* ... */
+  }
+
+
+@layer base {
+    
+    body {
+        font-family: var(--font-body);
+        color: var(--color-primary);
+        background-color: var(--color-white);
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-header);
+        color: var(--color-secondary);
+    }
+    
+    li {
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    a:hover {
+        color: var(--color-accent);
+    }
+    
+    input:focus {
+        outline: none;
+        border-color: var(--color-accent);
+    }
+}
+
+@layer components {
+    .card {
+      border-radius: 10px;
+      box-shadow: 0px 20px 35px 0px rgba(0, 0, 0, 0.15);
+    }
+    .sections {
+      width: 100%;
+      margin: auto;
+      max-width: 1470px;
+      padding: 0 20px;
+      
+  }
+  
+    .active {
+      border-bottom : 1px solid var(--color-accent);
+    }
+    
+  }
+
+.header {
+    background-color: var(--color-header-bg);
+    border-radius: 10px;
+    width: auto;
+    
+}
+.stext {
+  -webkit-text-stroke: 1px var(--color-secondary);
+  color: transparent;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.deals-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.deals-container {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.mobile-logo {
+  width: 25%;
+  height: auto;
+}
+
+.header-section {
+  padding-bottom: 55px;
+  background: var(--color-white);
+  box-shadow: 0px 20px 50.5px 0px rgba(68, 68, 68, 0.04);
+}
+
+.dotm-section {
+  background: linear-gradient(180deg, #FFF 0%, #FAFAFA 100%);
+}
+.timer {
+  border-radius: 10px;
+  background: var(--color-white);
+  box-shadow: 0px 4px 14px 1px rgba(0, 0, 0, 0.16);
+}
+
+.nnactive {
+  filter: drop-shadow(0px 20px 35px rgba(0, 0, 0, 0.15));
+  border-radius: 10px;
+  font-size: 0.875rem;
+  
+}
+
