@@ -3,11 +3,11 @@ import productOne from "../assets/product-one.png";
 
 
 export const navBarLinks = [
-    { label: "Home", href: "/" },
-    { label: "Categories", href: "/login" },
-    { label: "Shop", href: "/shop" },
-    { label: "About ", href: "/about" },
-    { label: "Contacts", href: "/contacts" },
+    { label: "Home", href: "/REACT-DUMMY/" },
+    { label: "Categories", href: "/REACT-DUMMY/login" },
+    { label: "Shop", href: "/REACT-DUMMY/shop" },
+    { label: "About ", href: "/REACT-DUMMY/about" },
+    { label: "Contacts", href: "/REACT-DUMMY/contacts" },
 ];
 
   export const deals = [
@@ -25,12 +25,12 @@ export const timer = [
 ];
 
 export const newArrivalCatigories = [
-    { label: "Bags", href: "/" },
-    { label: "Shoes", href: "/shoes" },
-    { label: "Jewelries", href: "/jewelries" },
-    { label: "Clothes", href: "/clothes" },
-    { label: "Accessories", href: "/accessories" },
-    { label: "Cosmetics", href: "/comestics" },
+    { label: "Bags", href: "/REACT-DUMMY/" },
+    { label: "Shoes", href: "/REACT-DUMMY/shoes" },
+    { label: "Jewelries", href: "/REACT-DUMMY/jewelries" },
+    { label: "Clothes", href: "/REACT-DUMMY/clothes" },
+    { label: "Accessories", href: "/REACT-DUMMY/accessories" },
+    { label: "Cosmetics", href: "/REACT-DUMMY/comestics" },
 ];
 
 export const newArrivalProducts = [

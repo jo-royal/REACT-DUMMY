@@ -14,14 +14,14 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element= {< Index />}  />
-        <Route path="login" element={ <Login />} />
-        <Route path="register" element={< Register />} />
-        <Route path="reset" element={<Reset />} />
-        <Route path="code-confirmation" element={<CodeConfirmation />} />"
-        <Route path="new-password" element={<NewPassword />} />
-        <Route path="contact" element={< Register />} />
-        <Route path="shop" element={< Shop />} />
+        <Route path="/REACT-DUMMY/" element= {< Index />}  />
+        <Route path="/REACT-DUMMY/login" element={ <Login />} />
+        <Route path="/REACT-DUMMY/register" element={< Register />} />
+        <Route path="/REACT-DUMMY/reset" element={<Reset />} />
+        <Route path="/REACT-DUMMY/code-confirmation" element={<CodeConfirmation />} />"
+        <Route path="/REACT-DUMMY/new-password" element={<NewPassword />} />
+        <Route path="/REACT-DUMMY/contact" element={< Register />} />
+        <Route path="/REACT-DUMMY/shop" element={< Shop />} />
       </Routes>
     </BrowserRouter>
   )

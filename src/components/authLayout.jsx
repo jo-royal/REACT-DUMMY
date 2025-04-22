@@ -11,7 +11,7 @@ export default function AuthLayout({title, image = loginimg, children}) {
       <div className='w-full lg:w-1/2 flex flex-col gap-10 p-5'>
         <div className='flex justify-between w-full'>
           <h2 className='text-2xl font-bold'><span className='text-accent'>PES</span>MIC</h2>
-          <Link to='/' className='flex card gap-2 h-fit p-2'> <Home />Home</Link>
+          <Link to='/REACT-DUMMY/' className='flex card gap-2 h-fit p-2'> <Home />Home</Link>
         </div>
         <div>
           <h3 className='text-lg font-body font-semibold'>{title}</h3>

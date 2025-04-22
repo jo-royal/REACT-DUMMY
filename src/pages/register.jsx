@@ -15,8 +15,8 @@ export default function Register() {
               <input type="password" placeholder='Password' className='search w-full border-b' />
               <input type="password" placeholder='Confirm Pass...' className='search w-full border-b' />
             </div>
-            <Link className='card w-full p-2 text-center text-white text-sm font-medium bg-accent' to="/register">Sign Up</Link>
-            <Link className='card w-full p-2 text-center text-sm font-medium text-white bg-black' to="/login">Sign In</Link>
+            <Link className='card w-full p-2 text-center text-white text-sm font-medium bg-accent' to="/REACT-DUMMY/register">Sign Up</Link>
+            <Link className='card w-full p-2 text-center text-sm font-medium text-white bg-black' to="/REACT-DUMMY/login">Sign In</Link>
       </form>
     </AuthLayout>
   )
