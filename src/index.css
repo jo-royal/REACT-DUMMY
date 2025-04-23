@@ -136,3 +136,25 @@
   
 }
 
+.step {
+  background: var(--color-gray-400);
+  border-radius: 2px;
+  width: 15rem;
+  height: 2px;
+}
+
+.step-line {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.step-num {
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--color-white);
+  text-align: center;
+}

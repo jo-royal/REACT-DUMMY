@@ -5,12 +5,14 @@ import Deals from '../components/deals'
 import Logos from '../components/logos'
 import Dotm from '../components/dotm'
 import NewArrival from '../components/newArrival'
+import MobileSearch from '../components/mobileSearch'
 
 export default function Index() {
   return (
     <div className=''> 
       
       <Navbar /> 
+      <MobileSearch />
       <Deals />
       <Header />
       <Logos />
