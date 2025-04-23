@@ -6,7 +6,7 @@ export const navBarLinks = [
     { label: "Home", href: "/REACT-DUMMY/" },
     { label: "Categories", href: "/REACT-DUMMY/login" },
     { label: "Shop", href: "/REACT-DUMMY/shop" },
-    { label: "About ", href: "/REACT-DUMMY/about" },
+    { label: "About ", href: "/REACT-DUMMY/checkout" },
     { label: "Contacts", href: "/REACT-DUMMY/contacts" },
 ];
 
