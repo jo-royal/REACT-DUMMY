@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function gitTest() {
   return (
-    <div>gitTest</div>
+    <div>A change is made</div>
   )
 }
