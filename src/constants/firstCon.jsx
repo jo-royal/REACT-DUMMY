@@ -11,10 +11,10 @@ export const navBarLinks = [
 ];
 
   export const deals = [
-    {icons: <Gift className="text-white w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" stroke-width={1.5} />, label: "10% OFF For First Timer", href: "/"},
-    {icons: <Gem className="text-white w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" stroke-width={1.5}/>, label: "Minus -5000 Every End Of The Month", href: "/"},
-    {icons: <HandCoins className="text-white w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" stroke-width={1.5}/>, label: "5% Off Coupon Order Above 100,0000", href: "/"},
-    {icons: <Percent className="text-white w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" stroke-width={1.5}/>, label: "Gifts lorem presson avengers", href: "/"},
+    {icons: <Gift className="text-white w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" strokeWidth={1.5} />, label: "10% OFF For First Timer", href: "/"},
+    {icons: <Gem className="text-white w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" strokeWidth={1.5}/>, label: "Minus -5000 Every End Of The Month", href: "/"},
+    {icons: <HandCoins className="text-white w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" strokeWidth={1.5}/>, label: "5% Off Coupon Order Above 100,0000", href: "/"},
+    {icons: <Percent className="text-white w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" strokeWidth={1.5}/>, label: "Gifts lorem presson avengers", href: "/"},
 ];
 
 export const timer = [

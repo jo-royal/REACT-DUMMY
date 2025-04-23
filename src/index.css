@@ -58,6 +58,14 @@
         outline: none;
         border-color: var(--color-accent);
     }
+
+    th {
+        font-family: var(--font-header);
+        color: var(--color-secondary);
+        text-align: start;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--color-accent);
+    }
 }
 
 @layer components {

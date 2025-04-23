@@ -6,6 +6,7 @@ import Shop from "./pages/shop";
 import Reset from "./pages/reset";
 import CodeConfirmation from "./pages/codeConfirmation";
 import NewPassword from "./pages/newPassword";
+import Wishlist from "./pages/wishlist";
 
 
 
@@ -20,6 +21,7 @@ export default function App() {
         <Route path="/REACT-DUMMY/reset" element={<Reset />} />
         <Route path="/REACT-DUMMY/code-confirmation" element={<CodeConfirmation />} />"
         <Route path="/REACT-DUMMY/new-password" element={<NewPassword />} />
+        <Route path="/REACT-DUMMY/wishlist" element={< Wishlist />} />
         <Route path="/REACT-DUMMY/contact" element={< Register />} />
         <Route path="/REACT-DUMMY/shop" element={< Shop />} />
       </Routes>
