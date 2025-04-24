@@ -66,6 +66,7 @@
         padding-bottom: 1rem;
         border-bottom: 1px solid var(--color-accent);
     }
+
 }
 
 @layer components {
@@ -83,6 +84,10 @@
   
     .active {
       border-bottom : 1px solid var(--color-accent);
+    }
+
+    .bg-deals {
+      background: linear-gradient(180deg, #FFF 0%, #FAFAFA 100%);
     }
     
   }
@@ -137,9 +142,8 @@
 }
 
 .step {
-  background: var(--color-gray-400);
-  border-radius: 2px;
-  width: 15rem;
+  border-radius: 50%;
+  width: 10rem;
   height: 2px;
 }
 
@@ -158,3 +162,4 @@
   color: var(--color-white);
   text-align: center;
 }
+

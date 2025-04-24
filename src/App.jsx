@@ -8,6 +8,9 @@ import CodeConfirmation from "./pages/codeConfirmation";
 import NewPassword from "./pages/newPassword";
 import Wishlist from "./pages/wishlist";
 import Checkout from "./pages/checkout";
+import ShippingUpdate from "./pages/shippingUpdate";
+import Payment from "./pages/payment";
+import Cart from "./pages/cart";
 
 
 
@@ -23,8 +26,10 @@ export default function App() {
         <Route path="/REACT-DUMMY/code-confirmation" element={<CodeConfirmation />} />"
         <Route path="/REACT-DUMMY/new-password" element={<NewPassword />} />
         <Route path="/REACT-DUMMY/wishlist" element={< Wishlist />} />
+        <Route path="/REACT-DUMMY/shipping-update" element={< ShippingUpdate />} />
         <Route path="/REACT-DUMMY/checkout" element={< Checkout />} />
-        <Route path="/REACT-DUMMY/contact" element={< Register />} />
+        <Route path="/REACT-DUMMY/payment" element={< Payment />} />
+        <Route path="/REACT-DUMMY/cart" element={< Cart />} />
         <Route path="/REACT-DUMMY/shop" element={< Shop />} />
       </Routes>
     </BrowserRouter>

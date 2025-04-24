@@ -4,18 +4,18 @@ import { Link } from 'react-router'
 
 export default function UserShipping() {
   return (
-    <div className='sections mt-15'>
-    <div className='flex justify-center w-full max-w-[500px] sm:max-w-[1470px]'>
+    <div className='bg-deals sections mt-10'>
+    <div className='flex justify-center w-full max-w-[500px] sm:max-w-[1470px] m-auto'>
         <div className='step-line'>
             <div className='step-num bg-accent'>1</div>
             <div className='text-sm sm:text-base'>Shipping</div>
         </div>
-        <div className='step mt-3'></div>
+        <div className='step mt-3 bg-gray-400'></div>
         <div className='step-line'>
             <div className='step-num bg-gray-400'>2</div>
             <div className='text-sm sm:text-base'>Checkout</div>
         </div>
-        <div className='step mt-3'></div>
+        <div className='step mt-3 bg-gray-400'></div>
         <div className='step-line'>
             <div className='step-num bg-gray-400'>3</div>
             <div className='text-sm sm:text-base'>Payment</div>
@@ -24,7 +24,7 @@ export default function UserShipping() {
 
 
 
-      <form  className='flex flex-col gap-6 mt-10 p-5 w-full max-w-[500px] m-auto border border-border rounded-xl'>
+      <form  className='card flex flex-col gap-6 mt-10 p-5 w-full max-w-[500px] m-auto border border-border rounded-xl bg-white'>
       <h6 className='text-md font-medium my-4'>Shipping Information</h6>
       <input type="text" placeholder='Full Name' className='search border-b border-border' />
       <input type="number" placeholder='Phone Number' className='search w-full border-b border-border' />

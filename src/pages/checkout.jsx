@@ -1,14 +1,16 @@
 import React from 'react'
-import Navbar from '../components/navbar'
-import PageNav from '../components/pageNav'
-import UserShipping from '../components/userShipping'
+import Navbar from '../components/Navbar.jsx'
+import CheckoutCom from '../components/checkoutCom.jsx'
 
 export default function Checkout() {
   return (
     <div>
-        <Navbar />
-        
-        <UserShipping />
+      <div className='shadow-lg pb-5 sm:pb-5 sm:pt-2'>
+      <Navbar />
+      </div>
+        <CheckoutCom / >
     </div>
+    
   )
 }
+
