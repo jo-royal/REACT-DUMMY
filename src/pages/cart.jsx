@@ -13,7 +13,7 @@ export default function Cart() {
         <h6>Cart in progress... </h6>
         <p>proceed to checkout. </p>
         <div className='mt-10'>
-        <Link className='card p-3 w-10 bg-black' to='/REACT-DUMMY/checkout'> Check Out</Link>
+        <Link className='card p-3 w-10 bg-black' to='/REACT-DUMMY/shipping-update'> Check Out</Link>
         </div>
         
     </div>
