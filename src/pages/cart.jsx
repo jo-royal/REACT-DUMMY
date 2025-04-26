@@ -15,7 +15,6 @@ export default function Cart() {
         <div className='mt-10'>
         <Link className='card p-3 w-10 bg-black' to='/REACT-DUMMY/shipping-update'> Check Out</Link>
         </div>
-        
     </div>
     </>
   )

@@ -58,28 +58,7 @@ const handlePaystack = () => {
 
       <div className='card md:flex justify-between w-full my-10 bg-white border border-border rounded-xl max-w-[500px] sm:max-w-[1470px] m-auto '>
         <div className='md:w-2/3'>
-          <div className='grid grid-cols-1 sm:grid-cols-2 justify-between w-full'>
-            <div className='p-5 h-fit w-fit flex flex-col gap-2'>
-                <h6 className='text-lg font-bold py-3'>Billing Info <Link className='text-accent text-sm font-normal' to='/REACT-DUMMY/shipping-update' >(edit)</Link></h6>
-                <p className='text-sm'><span className='font-medium text-secondary'>Full Name:</span> <span className='tracking-widest'>Test Test</span></p>
-                <p className='text-sm'><span className='font-medium text-secondary'>Phone Number:</span> <span className='tracking-widest'>+1234567890</span></p>
-                <p className='text-sm'><span className='font-medium text-secondary'>Street Address:</span> <span className='tracking-widest'>123 Main St</span></p>
-                <p className='text-sm'><span className='font-medium text-secondary'>City:</span> <span className='tracking-widest'>New York</span> </p>
-                <p className='text-sm'><span className='font-medium text-secondary'>State:</span> <span className='tracking-widest'>NY</span></p>
-                <p className='text-sm'><span className='font-medium text-secondary'>Zip Code:</span> <span className='tracking-widest'>10001</span></p>
-            </div>
-              
-            <div className='p-5 h-fit w-fit flex flex-col gap-2'>
-                <h6 className='text-lg font-bold py-3'>Shipping Info <Link className='text-accent text-sm font-normal' to='/REACT-DUMMY/shipping-update' >(edit)</Link></h6>
-                <p className='text-sm'><span className='font-medium text-secondary'>Full Name:</span> <span className='tracking-widest'>Test Test</span></p>
-                <p className='text-sm'><span className='font-medium text-secondary'>Phone Number:</span> <span className='tracking-widest'>+1234567890</span></p>
-                <p className='text-sm'><span className='font-medium text-secondary'>Street Address:</span> <span className='tracking-widest'>123 Main St</span></p>
-                <p className='text-sm'><span className='font-medium text-secondary'>City:</span> <span className='tracking-widest'>New York</span> </p>
-                <p className='text-sm'><span className='font-medium text-secondary'>State:</span> <span className='tracking-widest'>NY</span></p>
-                <p className='text-sm'><span className='font-medium text-secondary'>Zip Code:</span> <span className='tracking-widest'>10001</span></p>
-            </div>
-          </div>
-          <div className='p-5'>
+        <div className='p-5'>
             <div className='text-lg text-secondary font-bold py-3 w-full border-b border-accent'>Items To Order</div>
           
 
@@ -102,6 +81,27 @@ const handlePaystack = () => {
             </div>
           </div>
           ))}
+          </div>
+          <div className='grid grid-cols-1 sm:grid-cols-2 justify-between w-full'>
+            <div className='p-5 h-fit w-fit flex flex-col gap-2'>
+                <h6 className='text-lg font-bold py-3'>Billing Info <Link className='text-accent text-sm font-normal' to='/REACT-DUMMY/shipping-update' >(edit)</Link></h6>
+                <p className='text-sm'><span className='font-medium text-secondary'>Full Name:</span> <span className='tracking-widest'>Test Test</span></p>
+                <p className='text-sm'><span className='font-medium text-secondary'>Phone Number:</span> <span className='tracking-widest'>+1234567890</span></p>
+                <p className='text-sm'><span className='font-medium text-secondary'>Street Address:</span> <span className='tracking-widest'>123 Main St</span></p>
+                <p className='text-sm'><span className='font-medium text-secondary'>City:</span> <span className='tracking-widest'>New York</span> </p>
+                <p className='text-sm'><span className='font-medium text-secondary'>State:</span> <span className='tracking-widest'>NY</span></p>
+                <p className='text-sm'><span className='font-medium text-secondary'>Zip Code:</span> <span className='tracking-widest'>10001</span></p>
+            </div>
+              
+            <div className='p-5 h-fit w-fit flex flex-col gap-2'>
+                <h6 className='text-lg font-bold py-3'>Shipping Info <Link className='text-accent text-sm font-normal' to='/REACT-DUMMY/shipping-update' >(edit)</Link></h6>
+                <p className='text-sm'><span className='font-medium text-secondary'>Full Name:</span> <span className='tracking-widest'>Test Test</span></p>
+                <p className='text-sm'><span className='font-medium text-secondary'>Phone Number:</span> <span className='tracking-widest'>+1234567890</span></p>
+                <p className='text-sm'><span className='font-medium text-secondary'>Street Address:</span> <span className='tracking-widest'>123 Main St</span></p>
+                <p className='text-sm'><span className='font-medium text-secondary'>City:</span> <span className='tracking-widest'>New York</span> </p>
+                <p className='text-sm'><span className='font-medium text-secondary'>State:</span> <span className='tracking-widest'>NY</span></p>
+                <p className='text-sm'><span className='font-medium text-secondary'>Zip Code:</span> <span className='tracking-widest'>10001</span></p>
+            </div>
           </div>
         </div>
         <aside className='w-full md:w-4/12 bg-border'>
@@ -137,7 +137,6 @@ const handlePaystack = () => {
           </div>
         </aside>
       </div>
-        
     </div>
   )
 }

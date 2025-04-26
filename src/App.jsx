@@ -19,7 +19,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/REACT-DUMMY/" element= {< Index />}  />
+        <Route path="/REACT-DUMMY" element= {< Index />}  />
         <Route path="/REACT-DUMMY/login" element={ <Login />} />
         <Route path="/REACT-DUMMY/register" element={< Register />} />
         <Route path="/REACT-DUMMY/reset" element={<Reset />} />

@@ -3,7 +3,7 @@ import productOne from "../assets/product-one.png";
 
 
 export const navBarLinks = [
-    { label: "Home", href: "/REACT-DUMMY/" },
+    { label: "Home", href: "/REACT-DUMMY" },
     { label: "Categories", href: "/REACT-DUMMY/login" },
     { label: "Shop", href: "/REACT-DUMMY/shop" },
     { label: "About ", href: "/REACT-DUMMY/checkout" },
