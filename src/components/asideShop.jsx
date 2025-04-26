@@ -12,13 +12,13 @@ const handleSizeClick = (size) => {
     setSelectedSize(size === selectedSize ? null : size);
   };
 
-const colors =['green', 'red', 'blue', 'green', 'yellow', 'white', 'pink'];
+const colors =['green', 'red', 'blue', 'yellow', 'white', 'pink'];
 const [selectedColor, setSelectedColor] = useState(null);
 const handleColorClick = (color) => {
     setSelectedColor(color === selectedColor ? null : color);
   };
 
-const brands = ["Pesmic", "Random", "Random", "Random", "Just", "About"]
+const brands = ["Pesmic", "Royal", "Wave", "Random", "Just", "About"]
 const seasons = ["Winter", "Springs", "Autums", "Summer"]
 
 

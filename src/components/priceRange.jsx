@@ -64,7 +64,7 @@ export default function PriceRange() {
       </div>
 
       {/* Extra styling */}
-      <style jsx>{`
+      <style>{`
         input[type="range"].range-thumb::-webkit-slider-thumb {
           -webkit-appearance: none;
           appearance: none;
