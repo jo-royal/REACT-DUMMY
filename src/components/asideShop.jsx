@@ -4,6 +4,7 @@ import { colorClasses } from '../constants/colorList';
 import PriceRange from '../components/priceRange';
 
 
+
 export default function AsideShop() {
 
 const sizes = ["S", "M", "L", "XL"];
@@ -12,7 +13,7 @@ const handleSizeClick = (size) => {
     setSelectedSize(size === selectedSize ? null : size);
   };
 
-const colors =['green', 'red', 'blue', 'yellow', 'white', 'pink'];
+const colors =['indigo', 'violet', 'sky', 'cyan', 'emerald', 'amber'];
 const [selectedColor, setSelectedColor] = useState(null);
 const handleColorClick = (color) => {
     setSelectedColor(color === selectedColor ? null : color);
@@ -40,18 +41,18 @@ const seasons = ["Winter", "Springs", "Autums", "Summer"]
         </button>
       ))}
         </div>
+        {/**   color in filter  */}
         <p className='text-secondary mt-8 pb-2'>Color</p>
         <div className="flex gap-3 w-full flex-wrap">
-      {colors.map((color) => (
-        <button
-          key={color}
-          onClick={() => handleColorClick(color)}
-          className={`w-6 h-6 rounded-full border 
-            bg-${colorClasses[color]} 
-            ${selectedColor === color ? "scale-110 border-4 border-accent" : "border"} 
-            transition duration-200`}
-        />
-      ))}
+        {colors.map((color) => (
+          <button
+            key={color}
+            onClick={() => handleColorClick(color)}
+            className={`w-6 h-6 rounded-full border transition duration-200
+              ${selectedColor === color ? "scale-110 border-4 border-accent" : "border"} `}
+            style={{ backgroundColor: colorClasses[color] || color }}
+          />
+        ))}
         </div>
         <p className='text-secondary mt-8 pb-2'>Prices range</p>
         <div className='flex w-full justify-between -mt-3 text-sm'>
