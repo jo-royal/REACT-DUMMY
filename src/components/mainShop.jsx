@@ -34,10 +34,10 @@ export default function MainShop() {
       <div className='flex w-full justify-between bg-white p-4'>
         <div className="relative z-10 text-secondary ">
         <button
-          className="bg-white font-normal lg:font-semibold px-4 py-2 border border-gray-200 rounded-md shadow-sm w-40 text-left flex justify-between items-center"
+          className="bg-white font-normal lg:font-semibold px-2 sm:px-4 py-2 border border-gray-200 rounded-md shadow-sm w-30 sm:w-40 text-left flex justify-between items-center"
           onClick={() => setOpen(!open)}
         >
-          {selected} <span className="ml-2">▿</span>
+          {selected} <span className="ml-1 sm:ml-2">▿</span>
         </button>
 
       {open && (
@@ -48,7 +48,7 @@ export default function MainShop() {
               <li key={option}>
                 <button
                   onClick={() => handleSelect(option)}
-                  className="w-full text-left px-4 py-2 hover:bg-gray-100"
+                  className="w-full text-left px-2 sm:px-4 py-2 hover:bg-gray-100"
                 >
                   {option}
                 </button>
