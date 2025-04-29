@@ -11,7 +11,7 @@ export default function ProductCard( {title, img, vendor, rating, colors, sizes,
         <div className="rounded bg-white p-1 w-full">
             <Link to={slug} className='w-full hover:text-primary'>
                 <img className='transform hover:scale-102 hover:rounded duration-300 ease-in-out' src={img} alt={title} />
-                <p className='truncate py-1 sm:px-2 md:px-0 font-medium font-header text-secondary hover:text-primary'>{title}</p>
+                <p className='truncate py-1 sm:px-2 md:px-0 font-medium font-header text-secondary'>{title}</p>
 
                 {/* vendor and rating */}
                 <div className='flex justify-between sm:px-2 md:px-0'>
@@ -41,12 +41,15 @@ export default function ProductCard( {title, img, vendor, rating, colors, sizes,
                     </div>
                     {/* Sizes */}
                     <div className="deals-container flex gap-1 py-2 w-1/2 overflow-x-scroll pr-1">
-                    {sizes.slice(0, 3).map((size) => (
+                    {/* {sizes.slice(0, 3).map((size) => (
                         <p key={size}className="px-1 text-sm border border-gray-400 rounded bg-white hover:text-primary">{size}</p>
                     ))}
                     {sizes.length > 3 && (
                         <span className="px-1 text-sm border border-gray-400 rounded bg-white">+{sizes.length - 3}</span>
-                    )}
+                    )} */}
+                    {sizes.map((size, idx) => (
+                        <p key={idx} className="px-1 text-sm border border-gray-400 rounded bg-white">{size}</p>
+                    ))}
                     </div>
                 </div>
             </Link>
@@ -55,8 +58,8 @@ export default function ProductCard( {title, img, vendor, rating, colors, sizes,
               <div className="flex items-start gap-1">
               {salesPrice ? (
                 <>
-                  <span className="text-pink-500 font-semibold sm:text-lg">₦{price}</span>
-                  <span className="text-gray-400 line-through text-sm hidden sm:block">₦{salesPrice}</span>
+                  <span className="text-pink-500 font-semibold sm:text-lg">₦{salesPrice}</span>
+                  <span className="text-gray-400 font-jost line-through text-sm hidden sm:block">₦{price}</span>
                 </>
                 ) : (
                     <span className="text-gray-900 font-semibold text-lg">₦{price}</span>
