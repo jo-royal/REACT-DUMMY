@@ -9,6 +9,7 @@ import Paystack from "../assets/paystack.png";
 import { Heart, CircleHelp, ArrowUpDown, Share2 } from "lucide-react";
 import { colorClasses } from "../constants/colorList";
 import { Link } from "react-router";
+import ReviewProduct from "./reviewProduct";
 
 export default function DetailsCom() {
   const img = [TestOne, TestTwo, TestThree];
@@ -68,9 +69,8 @@ export default function DetailsCom() {
             {img.map((item, index) => (
               <img
                 key={index}
-                className={`w-18 h-20 p-1 ${
-                  index === activeIndex ? "border border-pink-500" : ""
-                }`}
+                className={`w-18 h-20 p-1 ${index === activeIndex ? "border border-pink-500" : ""
+                  }`}
                 src={item}
                 alt=""
                 onClick={() => handleClick(index)}
@@ -95,9 +95,8 @@ export default function DetailsCom() {
               Long Hat Summer Lorem ipsum dolor sit amet.
             </h1>
             <button
-              className={`p-2 w-fit h-fit border rounded-full cursor-pointer ${
-                activeWish ? "border-accent" : "border-primary"
-              }`}
+              className={`p-2 w-fit h-fit border rounded-full cursor-pointer ${activeWish ? "border-accent" : "border-primary"
+                }`}
               onClick={handleWishClick}
             >
               <Heart
@@ -158,11 +157,10 @@ export default function DetailsCom() {
                   key={index}
                   onClick={() => handleSizeClick(size)}
                   className={`px-3 py-1 border rounded-md cursor-pointer 
-                            ${
-                              selectedSize === size
-                                ? "border-accent"
-                                : "border-border text-primary"
-                            } 
+                            ${selectedSize === size
+                      ? "border-accent"
+                      : "border-border text-primary"
+                    } 
                             bg-white transition duration-200`}
                 >
                   {size}
@@ -181,11 +179,10 @@ export default function DetailsCom() {
                   key={color}
                   onClick={() => handleColorClick(color)}
                   className={`w-6 h-6 rounded-full border transition duration-200 cursor-pointer
-                                ${
-                                  selectedColor === color
-                                    ? "scale-110 border-4 border-accent"
-                                    : "border"
-                                } `}
+                                ${selectedColor === color
+                      ? "scale-110 border-4 border-accent"
+                      : "border"
+                    } `}
                   style={{ backgroundColor: colorClasses[color] || color }}
                 />
               ))}
@@ -280,13 +277,15 @@ export default function DetailsCom() {
       {/** description, review, size guides */}
       <div className="w-full mt-1 ">
         <div className="bg-white w-full justify-center flex gap-15 text-md text-secondary font-header">
-          <button className="border-b-2 border-accent py-3 px-1 ">
+          <button className="border-b-2 border-accent py-3 px-1 cursor-pointer">
             Description
           </button>
-          <button className="">Reviews</button>
-          <button className="">Size Guide</button>
+          <button className="cursor-pointer">Reviews</button>
+          <button className="cursor-pointer">Size Guide</button>
         </div>
-        <div className="sections mt-1 bg-white w-full h-1000"> </div>
+        <div className="sections mt-1 bg-white w-full py-10">
+          <ReviewProduct />
+        </div>
       </div>
     </section>
   );
