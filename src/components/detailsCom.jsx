@@ -62,10 +62,10 @@ export default function DetailsCom() {
 
   return (
     <section>
-      <div className="sections w-full pb-35 flex bg-white pt-5 gap-2 justify-start items-start">
+      <div className="lg:px-5 m-auto w-full pb-25 lg:pb-35 flex flex-col lg:flex-row bg-white lg:pt-5 gap-2 justify-start items-start">
         {/** image */}
-        <div className=" flex w-[50%] gap-1 h-fit sticky top-0">
-          <div className="flex flex-col p-1 ">
+        <div className=" flex flex-col lg:flex-row w-full lg:w-[50%] gap-1  lg:h-fit lg:sticky top-0">
+          <div className="flex order-2 lg:order-1 lg:flex-col p-1 overflow-x-auto lg:overflow-y-auto gap-2 h-full w-full lg:w-auto">
             {img.map((item, index) => (
               <img
                 key={index}
@@ -77,7 +77,7 @@ export default function DetailsCom() {
               />
             ))}
           </div>
-          <div className="w-[450px] h-auto">
+          <div className="w-full lg:w-[450px] h-auto order-1 lg:order-2">
             <HoverZoom
               src={imgIndex}
               zoomScale={2}
@@ -86,12 +86,12 @@ export default function DetailsCom() {
           </div>
         </div>
         {/** details */}
-        <div className="w-[50%] px-5">
+        <div className="w-full lg:w-[50%] px-3 lg:px-5">
           {/** vendor */}
           <p className="font-header pb-2">Pesmic</p>
           {/** title and wishlist */}
           <div className="flex gap-3 w-full mb-2">
-            <h1 className="text-2xl font-normal text-start text-black">
+            <h1 className="text-lg lg:text-2xl font-normal text-start text-black">
               Long Hat Summer Lorem ipsum dolor sit amet.
             </h1>
             <button
@@ -108,8 +108,9 @@ export default function DetailsCom() {
               />
             </button>
           </div>
-          <div className="w-full flex gap-2">
-            <div className="text-accent text-md ">
+          {/** stars and rating */}
+          <div className="w-full flex gap-2 py-2 lg:py-0">
+            <div className="text-accent lg:text-md ">
               {"★".repeat(Math.floor(rating))}
               {"☆".repeat(5 - Math.floor(rating))}
             </div>
@@ -120,7 +121,7 @@ export default function DetailsCom() {
             {salesPrice ? (
               <div className="flex items-start gap-3">
                 <div className="flex items-start">
-                  <span className="text-secondary text-3xl font-header">
+                  <span className="text-secondary text-2xl lg:text-3xl font-header">
                     ₦{salesPrice}
                   </span>
                   <span className="text-secondary-deep font-jost line-through text-sm">
@@ -134,7 +135,7 @@ export default function DetailsCom() {
                 </div>
               </div>
             ) : (
-              <span className="text-secondary text-3xl font-header">
+              <span className="text-secondary text-2xl lg:text-3xl font-header">
                 ₦{price}
               </span>
             )}
@@ -143,8 +144,9 @@ export default function DetailsCom() {
           <p className="pt-5 font-jost text-secondary-deep">
             Only <b>{stock}</b> item(s) left in stock!
           </p>
-          <div className="w-2/3 h-1 bg-border relative rounded-2xl mt-2">
-            <div className="w-1/6 h-1 bg-accent absolute top-0 left-0 rounded-2xl"></div>
+          <div className="w-full lg:w-2/3 h-1 bg-border rounded-2xl mt-2">
+            <div className="h-1 bg-accent rounded-2xl"
+              style={{ width: `${(stock / 50) * 100}%` }}></div>
           </div>
           {/** Size */}
           <div className="mt-7">
@@ -277,13 +279,13 @@ export default function DetailsCom() {
       {/** description, review, size guides */}
       <div className="w-full mt-1 ">
         <div className="bg-white w-full justify-center flex gap-15 text-md text-secondary font-header">
-          <button className="border-b-2 border-accent py-3 px-1 cursor-pointer">
+          <button className="border-b-2 border-accent my-5 py-1 px-1 cursor-pointer">
             Description
           </button>
           <button className="cursor-pointer">Reviews</button>
           <button className="cursor-pointer">Size Guide</button>
         </div>
-        <div className="sections mt-1 bg-white w-full py-10">
+        <div className=" mt-1 bg-white w-full">
           <ReviewProduct />
         </div>
       </div>

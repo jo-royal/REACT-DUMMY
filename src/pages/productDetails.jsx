@@ -9,16 +9,16 @@ export default function ProductDetails() {
     <div>
       <Navbar />
       <div className='flex w-full gap-1 pt-1 mt-8 bg-bg-shop'>
-        <div className='w-[87%]'>
+        <div className='w-full lg:w-[87%]'>
           <DetailsCom />
         </div>
-        
+
         <div className='hidden lg:block w-[17%]'>
           < AsideShopRight />
         </div>
-         
+
       </div>
-      
+
     </div>
   )
 }

@@ -15,7 +15,7 @@ export const products = [
         "sizes": ["S", "M", "L", "XL"],
         "price": 10000,
         "salesPrice": 8000,
-        "slug": "nova-relaxed-buttonless-linen-shirt"
+        "slug": "details"
     },
     {
         "id": 2,
@@ -26,7 +26,7 @@ export const products = [
         "colors": ['black', 'white', 'blue', 'red'],
         "sizes": ["S", "M", "L", "XL"],
         "price": 10000,
-        "slug": "nova-relaxed-buttonless-linen-shirt"
+        "slug": "details"
     },
     {
         "id": 3,
@@ -38,7 +38,7 @@ export const products = [
         "sizes": ["S", "M", "L", "XL"],
         "price": 10000,
         "salesPrice": 8000,
-        "slug": "nova-relaxed-buttonless-linen-shirt"
+        "slug": "details"
     },
     {
         "id": 4,
@@ -49,7 +49,7 @@ export const products = [
         "colors": ['black', 'white', 'blue', 'red'],
         "sizes": ["S", "M", "L", "XL"],
         "price": 10000,
-        "slug": "nova-relaxed-buttonless-linen-shirt"
+        "slug": "details"
     },
     {
         "id": 5,
@@ -61,7 +61,7 @@ export const products = [
         "sizes": ["S", "M", "L", "XL"],
         "price": 10000,
         "salesPrice": 8000,
-        "slug": "nova-relaxed-buttonless-linen-shirt"
+        "slug": "details"
     },
     {
         "id": 6,
@@ -73,7 +73,7 @@ export const products = [
         "sizes": ["S", "M", "L", "XL"],
         "price": 10000,
         "salesPrice": 8000,
-        "slug": "nova-relaxed-buttonless-linen-shirt"
+        "slug": "details"
     },
     {
         "id": 7,
@@ -85,7 +85,7 @@ export const products = [
         "sizes": ["S", "M", "L", "XL"],
         "price": 10000,
         "salesPrice": 8000,
-        "slug": "nova-relaxed-buttonless-linen-shirt"
+        "slug": "details"
     },
     {
         "id": 8,
@@ -97,7 +97,7 @@ export const products = [
         "sizes": ["S", "M", "L", "XL"],
         "price": 10000,
         "salesPrice": 8000,
-        "slug": "nova-relaxed-buttonless-linen-shirt"
+        "slug": "details"
     },
     {
         "id": 9,
@@ -109,7 +109,7 @@ export const products = [
         "sizes": ["S", "M", "L", "XL"],
         "price": 10000,
         "salesPrice": 8000,
-        "slug": "nova-relaxed-buttonless-linen-shirt"
+        "slug": "details"
     },
     {
         "id": 10,
@@ -121,7 +121,7 @@ export const products = [
         "sizes": ["S", "M", "L", "XL"],
         "price": 10000,
         "salesPrice": 8000,
-        "slug": "nova-relaxed-buttonless-linen-shirt"
+        "slug": "details"
     },
     {
         "id": 11,
@@ -133,7 +133,7 @@ export const products = [
         "sizes": ["S", "M", "L", "XL"],
         "price": 10000,
         "salesPrice": 8000,
-        "slug": "nova-relaxed-buttonless-linen-shirt"
+        "slug": "details"
     },
     {
         "id": 12,
@@ -145,7 +145,7 @@ export const products = [
         "sizes": ["S", "M", "L", "XL"],
         "price": 10000,
         "salesPrice": 8000,
-        "slug": "nova-relaxed-buttonless-linen-shirt"
+        "slug": "details"
     }
 ]
 
@@ -168,80 +168,70 @@ export const reviewData = {
             name: "John Doe",
             rating: 5,
             comment: "Amazing product. Exceeded expectations.",
-            verified: true,
-            date: "2024-12-01",
+            date: "2025-09-28T23:59:59.504Z",
         },
         {
             id: 2,
             name: "Jane Smith",
             rating: 4,
-            comment: "Pretty good but shipping was slow.",
-            verified: true,
-            date: "2024-11-15",
+            comment: "Pretty good but shipping was slow. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, explicabo. ",
+            date: "2025-10-03T04:41:37.332Z",
         },
         {
             id: 3,
             name: "Alice Johnson",
             rating: 3,
             comment: "Average quality. Not what I expected.",
-            verified: false,
-            date: "2024-10-20",
+            date: "2025-09-25T07:46:34.428Z",
         },
         {
             id: 4,
             name: "Bob Brown",
             rating: 2,
             comment: "Not worth the price. Disappointed.",
-            verified: true,
-            date: "2024-09-10",
+            date: "2025-09-21T23:41:30.340Z",
         },
         {
             id: 5,
             name: "Charlie Davis",
             rating: 1,
             comment: "Terrible experience. Will not buy again.",
-            verified: false,
-            date: "2024-08-05",
+            date: "2024-11-14T07:44:28.735Z",
         },
         {
             id: 6,
             name: "Diana Prince",
             rating: 5,
             comment: "Absolutely love it! Highly recommend.",
-            verified: true,
-            date: "2024-07-25",
+            date: "2024-07-26T12:37:48.256Z",
         },
         {
             id: 7,
             name: "Ethan Hunt",
             rating: 4,
             comment: "Good product but could be improved.",
-            verified: true,
-            date: "2024-06-30",
+            date: "2024-04-29T11:07:21.456Z",
         },
         {
             id: 8,
             name: "Fiona Apple",
             rating: 3,
             comment: "It's okay, nothing special.",
-            verified: false,
-            date: "2024-05-15",
+            date: "2025-11-03T18:50:54.772Z",
         },
         {
             id: 9,
             name: "George Clooney",
             rating: 2,
             comment: "Not what I expected. Would not recommend.",
-            verified: true,
-            date: "2024-04-10",
+            date: "2024-01-18T00:42:05.710Z",
         },
         {
             id: 10,
             name: "Hannah Montana",
             rating: 1,
             comment: "Very disappointed with the quality.",
-            verified: false,
-            date: "2024-03-01",
+            date: "2025-05-28T21:29:44.421Z",
         },
         // More mock reviews...
     ],
