@@ -12,7 +12,7 @@ import { Link } from "react-router";
 import ReviewProduct from "./reviewProduct";
 
 export default function DetailsCom() {
-  const img = [TestOne, TestTwo, TestThree];
+  const img = [TestTwo, TestOne, TestThree];
   const [imgIndex, setImgIndex] = useState(img[0]);
   const [activeIndex, setActiveIndex] = useState(0);
 
