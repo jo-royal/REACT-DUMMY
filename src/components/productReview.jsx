@@ -38,7 +38,7 @@ export default function ReviewProduct() {
 
 
     return (
-        <div className="w-full flex flex-col lg:flex-row gap-1 bg-bg-shop">
+        <div className="w-full flex flex-col lg:flex-row gap-1 bg-bg-shop border-b-4 border-bg-shop">
             {/** sticky sidebar customer review */}
             <div className="w-full lg:w-[35%] bg-white lg:sticky lg:h-screen top-0 py-10 px-3 sm:px-5">
                 <h3 className="lg:pb-5 text-xl">Customer reviews</h3>

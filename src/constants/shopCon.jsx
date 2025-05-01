@@ -32,7 +32,7 @@ export const products = [
     {
         "id": 3,
         "title": "Loose Classic",
-        "img": testImg,
+        "img": testImg3,
         "vendor": "Pesmic",
         "rating": 4.5,
         "colors": ['black', 'white', 'blue', 'red'],

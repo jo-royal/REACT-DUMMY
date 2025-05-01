@@ -28,9 +28,9 @@ export default function RelatedProduct({ title, data }) {
                 </div>
             </div>
 
-            <div ref={scrollRef} className='deals-container flex mt-8 w-full overflow-x-scroll'>
+            <div ref={scrollRef} className='deals-container bg-bg-shop mt-8 w-full grid auto-cols-[minmax(230px,_300px)] grid-flow-col gap-1 overflow-x-scroll'>
                 {data.map((item) => (
-                    <div key={item.id} className='w-1/2 sm:w-1/3 lg:w-1/5 p-1 bg-bg-shop'>
+                    <div key={item.id} className=' p-1 bg-bg-shop'>
                         < ProductCard title={item.title} img={item.img} vendor={item.vendor} rating={item.rating} colors={item.colors} sizes={item.sizes} price={item.price} salesPrice={item.salesPrice} slug={item.slug}
                         />
                     </div>

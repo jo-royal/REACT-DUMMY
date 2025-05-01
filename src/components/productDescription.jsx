@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function ProductDescription() {
     return (
-        <div className='w-full bg-white py-10 border-b-2 border-bg-shop'>
+        <div className='w-full bg-white py-10 border-b-4 border-bg-shop'>
             <div className="w-full lg:w-2/3 p-3 sm:p-5 ">
                 <h2 className="text-lg md:text-xl font-semibold mb-4">Product Description</h2>
                 <p className="leading-relaxed text-sm">

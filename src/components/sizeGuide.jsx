@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function SizeGuide() {
     return (
-        <div className="w-full overflow-x-auto rounded-lg border border-gray-200 p-4 bg-white">
+        <div className="w-full overflow-x-auto pb-15  p-4 bg-white border-b-4 border-bg-shop">
             <h2 className="text-lg md:text-xl font-semibold mb-4 text-center">Size Guide</h2>
 
             <table className="w-full text-sm md:text-base table-auto border-collapse">

@@ -10,7 +10,7 @@ export default function ProductCard({ title, img, vendor, rating, colors, sizes,
         <div className='w-full'>
             <div className="rounded bg-white p-1 w-full">
                 <Link to={slug} className='w-full hover:text-primary'>
-                    <img className='transform hover:scale-102 hover:rounded duration-300 ease-in-out' src={img} alt={title} />
+                    <img className='transform hover:scale-102 hover:rounded duration-300 ease-in-out w-full' src={img} alt={title} />
                     <p className='truncate py-1 sm:px-2 md:px-0 font-medium font-header text-secondary'>{title}</p>
 
                     {/* vendor and rating */}
