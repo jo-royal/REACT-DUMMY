@@ -40,7 +40,7 @@ export default function reviewProduct() {
     return (
         <div className="w-full flex flex-col lg:flex-row gap-1 bg-bg-shop">
             {/** sticky sidebar customer review */}
-            <div className="w-full lg:w-[35%] bg-white lg:sticky lg:h-screen top-0 py-10 px-3 lg:px-5">
+            <div className="w-full lg:w-[35%] bg-white lg:sticky lg:h-screen top-0 py-10 px-3 sm:px-5">
                 <h3 className="lg:pb-5 text-xl">Customer reviews</h3>
                 <div className='flex items-center gap-2 py-4'>
                     <h6 className='text-3xl'>{averageRating}</h6>
@@ -74,7 +74,7 @@ export default function reviewProduct() {
             <div className="flex-1 bg-white">
                 {/** sortOptions menu */}
                 <div className='py-2 items-center border-b-4 border-bg-shop'>
-                    <div className='flex justify-between lg:items-center px-3 lg:px-5'>
+                    <div className='flex justify-between lg:items-center px-3 sm:px-5'>
                         {sortOptions.map((option, index) => (
                             <button key={index} className={`card text-secondary text-sm cursor-pointer px-3 py-1.5 ${selected === option ? 'card bg-black text-white' : ''}`}
                                 onClick={() => handleSort(option)} >
@@ -84,7 +84,7 @@ export default function reviewProduct() {
                     </div>
                 </div>
                 {/** customers reviews */}
-                <div className='p-3 lg:p-5'>
+                <div className='p-3 sm:p-5'>
                     {reviews.map((review) => (
                         <div className='flex items-center gap-5 py-3 lg:py-5 border-b-2 border-bg-shop' key={review.id}>
                             <div className='w-full lg:w-5/6'>

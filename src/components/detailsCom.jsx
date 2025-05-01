@@ -62,10 +62,11 @@ export default function DetailsCom() {
 
   return (
     <section>
-      <div className="lg:px-5 m-auto w-full pb-25 lg:pb-35 flex flex-col lg:flex-row bg-white lg:pt-5 gap-2 justify-start items-start">
+      <div className="sm:px-5 m-auto w-full pb-25 lg:pb-35 flex flex-col lg:flex-row bg-white lg:pt-5 gap-2 justify-start items-start">
+
         {/** image */}
-        <div className=" flex flex-col lg:flex-row w-full lg:w-[50%] gap-1  lg:h-fit lg:sticky top-0">
-          <div className="flex order-2 lg:order-1 lg:flex-col p-1 overflow-x-auto lg:overflow-y-auto gap-2 h-full w-full lg:w-auto">
+        <div className=" flex flex-col sm:flex-row w-full lg:w-[50%] gap-1 sm:gap-5 lg:gap-1  lg:h-fit lg:sticky top-0 sm:my-5 md:my-0">
+          <div className="flex order-2 sm:order-1 sm:flex-col p-1 overflow-x-auto lg:overflow-y-auto gap-2 h-full w-full sm:w-auto">
             {img.map((item, index) => (
               <img
                 key={index}
@@ -77,7 +78,7 @@ export default function DetailsCom() {
               />
             ))}
           </div>
-          <div className="w-full lg:w-[450px] h-auto order-1 lg:order-2">
+          <div className="w-full sm:max-w-[450px] h-auto order-1 sm:order-2">
             <HoverZoom
               src={imgIndex}
               zoomScale={2}
@@ -85,12 +86,15 @@ export default function DetailsCom() {
             />
           </div>
         </div>
+
         {/** details */}
         <div className="w-full lg:w-[50%] px-3 lg:px-5">
+
           {/** vendor */}
           <p className="font-header pb-2">Pesmic</p>
+
           {/** title and wishlist */}
-          <div className="flex gap-3 w-full mb-2">
+          <div className="flex gap-3 justify-between w-full mb-2">
             <h1 className="text-lg lg:text-2xl font-normal text-start text-black">
               Long Hat Summer Lorem ipsum dolor sit amet.
             </h1>
@@ -108,6 +112,7 @@ export default function DetailsCom() {
               />
             </button>
           </div>
+
           {/** stars and rating */}
           <div className="w-full flex gap-2 py-2 lg:py-0">
             <div className="text-accent lg:text-md ">
@@ -116,6 +121,7 @@ export default function DetailsCom() {
             </div>
             <span className="text-secondary">({count})</span>
           </div>
+
           {/** price and sales */}
           <div className="mt-5">
             {salesPrice ? (
@@ -140,14 +146,37 @@ export default function DetailsCom() {
               </span>
             )}
           </div>
+
           {/** Stock */}
           <p className="pt-5 font-jost text-secondary-deep">
             Only <b>{stock}</b> item(s) left in stock!
           </p>
-          <div className="w-full lg:w-2/3 h-1 bg-border rounded-2xl mt-2">
+          <div className="w-full sm:w-3/4 lg:w-2/3 h-1 bg-border rounded-2xl mt-2">
             <div className="h-1 bg-accent rounded-2xl"
               style={{ width: `${(stock / 50) * 100}%` }}></div>
           </div>
+
+          {/** Color */}
+          <div className="mt-7">
+            <p className="font-header text-secondary">
+              <b>Color:</b> {selectedColor}{" "}
+            </p>
+            <div className="flex gap-2 mt-1">
+              {colors.map((color) => (
+                <button
+                  key={color}
+                  onClick={() => handleColorClick(color)}
+                  className={`w-6 h-6 rounded-full border transition duration-200 cursor-pointer
+                                ${selectedColor === color
+                      ? "scale-110 border-4 border-accent"
+                      : "border"
+                    } `}
+                  style={{ backgroundColor: colorClasses[color] || color }}
+                />
+              ))}
+            </div>
+          </div>
+
           {/** Size */}
           <div className="mt-7">
             <p className="font-header text-secondary">
@@ -170,26 +199,7 @@ export default function DetailsCom() {
               ))}
             </div>
           </div>
-          {/** Color */}
-          <div className="mt-7">
-            <p className="font-header text-secondary">
-              <b>Color:</b> {selectedColor}{" "}
-            </p>
-            <div className="flex gap-2 mt-1">
-              {colors.map((color) => (
-                <button
-                  key={color}
-                  onClick={() => handleColorClick(color)}
-                  className={`w-6 h-6 rounded-full border transition duration-200 cursor-pointer
-                                ${selectedColor === color
-                      ? "scale-110 border-4 border-accent"
-                      : "border"
-                    } `}
-                  style={{ backgroundColor: colorClasses[color] || color }}
-                />
-              ))}
-            </div>
-          </div>
+
           {/** qauntity and add to cart */}
           <div className="mt-7 w-full">
             <p className="font-header text-secondary">
@@ -225,6 +235,7 @@ export default function DetailsCom() {
               </div>
             </div>
           </div>
+
           {/** related, ask question, share */}
           <div className="flex gap-3 justify-between w-full mt-15 pb-5 border-b border-border">
             <div className="flex gap-3 text-black">
@@ -246,6 +257,7 @@ export default function DetailsCom() {
               </Link>
             </div>
           </div>
+
           {/** delivery and shipping */}
           <div className="mt-10">
             <div className="flex items-center gap-2">
@@ -263,6 +275,7 @@ export default function DetailsCom() {
               </p>
             </div>
           </div>
+
           {/** payments method and garantees */}
           <div className="mt-10 w-full h-fit bg-bg-shop rounded ">
             <img
@@ -276,6 +289,7 @@ export default function DetailsCom() {
           </div>
         </div>
       </div>
+
       {/** description, review, size guides */}
       <div className="w-full mt-1 ">
         <div className="bg-white w-full justify-center flex gap-15 text-md text-secondary font-header">
