@@ -22,9 +22,9 @@ export default function RelatedProduct({ title, data }) {
         <div className='bg-white px-1 sm:px-5 w-full'>
             <div className='flex justify-between '>
                 <h2 className='text-xl lg:text-2xl font-medium'>{title}</h2>
-                <div className='flex gap-2 p-1 border border-border rounded w-fit'>
-                    <button onClick={scrollLeft} className='px-2 cursor-pointer hover:text-accent'> &lt; </button>
-                    <button onClick={scrollRight} className='px-2 hover:text-accent cursor-pointer'> &gt; </button>
+                <div className='flex gap-2 py-1 border border-border rounded w-fit'>
+                    <button onClick={scrollLeft} className='px-3  cursor-pointer hover:text-accent '> &lt; </button>
+                    <button onClick={scrollRight} className='px-3  hover:text-accent cursor-pointer'> &gt; </button>
                 </div>
             </div>
 
