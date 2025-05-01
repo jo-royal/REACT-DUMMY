@@ -9,7 +9,7 @@ import Paystack from "../assets/paystack.png";
 import { Heart, CircleHelp, ArrowUpDown, Share2 } from "lucide-react";
 import { colorClasses } from "../constants/colorList";
 import { Link } from "react-router";
-import ReviewProduct from "./reviewProduct";
+import ReviewProduct from "./productReview";
 import RelatedProduct from "./relatedProduct";
 import { products } from '../constants/shopCon';
 import SizeGuide from "./sizeGuide";
