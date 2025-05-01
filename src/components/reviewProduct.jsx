@@ -5,7 +5,7 @@ import { formatDate } from './js/formatsDates';
 
 
 
-export default function reviewProduct() {
+export default function ReviewProduct() {
     const averageRating = reviewData.meta.averageRating
     const totalReviews = reviewData.meta.totalReviews
     const ratingBreakdown = reviewData.meta.ratingBreakdown

@@ -10,6 +10,10 @@ import { Heart, CircleHelp, ArrowUpDown, Share2 } from "lucide-react";
 import { colorClasses } from "../constants/colorList";
 import { Link } from "react-router";
 import ReviewProduct from "./reviewProduct";
+import RelatedProduct from "./relatedProduct";
+import { products } from '../constants/shopCon';
+import SizeGuide from "./sizeGuide";
+import ProductDescription from "./productDescription";
 
 export default function DetailsCom() {
   const img = [TestTwo, TestOne, TestThree];
@@ -58,6 +62,21 @@ export default function DetailsCom() {
       selectedColor,
       selectedQuantity,
     });
+  };
+
+  const [activeTab, setActiveTab] = useState('description');
+
+  const tabSwither = () => {
+    switch (activeTab) {
+      case 'description':
+        return <ProductDescription />;
+      case 'reviews':
+        return <ReviewProduct />;
+      case 'size-guide':
+        return <SizeGuide />;
+      default:
+        return <ProductDescription />;
+    }
   };
 
   return (
@@ -281,7 +300,7 @@ export default function DetailsCom() {
             <img
               src={Paystack}
               alt=""
-              className="m-auto p-4 pb-2 h-[60px] w-auto"
+              className="m-auto p-4 pb-2 h-[50px] lg:h-[60px] w-auto"
             />
             <p className="w-fit pb-4 font-header text-secondary m-auto">
               Guarantee safe & secure checkout
@@ -293,15 +312,33 @@ export default function DetailsCom() {
       {/** description, review, size guides */}
       <div className="w-full mt-1 ">
         <div className="bg-white w-full justify-center flex gap-15 text-md text-secondary font-header">
-          <button className="border-b-2 border-accent my-5 py-1 px-1 cursor-pointer">
+          <button
+            className={` my-5 py-1 px-1 cursor-pointer ${activeTab === 'description' ? "border-b-2 border-accent" : ""}`}
+            onClick={() => setActiveTab('description')}>
             Description
           </button>
-          <button className="cursor-pointer">Reviews</button>
-          <button className="cursor-pointer">Size Guide</button>
+          <button
+            className={` my-5 py-1 px-1 cursor-pointer ${activeTab === 'reviews' ? "border-b-2 border-accent" : ""}`}
+            onClick={() => setActiveTab('reviews')}>
+            Reviews</button>
+          <button
+            className={` my-5 py-1 px-1 cursor-pointer ${activeTab === 'size-guide' ? "border-b-2 border-accent" : ""}`}
+            onClick={() => setActiveTab('size-guide')}>
+            Size Guide</button>
         </div>
         <div className=" mt-1 bg-white w-full">
-          <ReviewProduct />
+          {tabSwither()}
         </div>
+      </div>
+
+      {/** Related Products */}
+      <div className="w-full py-20 bg-white">
+        <RelatedProduct title={'Related Products'} data={products} />
+      </div>
+
+      {/** Goes With */}
+      <div className="w-full pb-20 bg-white">
+        <RelatedProduct title={'Goes With'} data={products} />
       </div>
     </section>
   );

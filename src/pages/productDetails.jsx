@@ -9,7 +9,7 @@ export default function ProductDetails() {
     <div className='w-full max-w-[500px] sm:max-w-[1470px] mx-auto '>
       <Navbar />
       <div className='flex w-full gap-1 lg:pt-1 mt-8 bg-bg-shop'>
-        <div className='w-full md:w-[80%] lg:w-[87%]'>
+        <div className='w-full md:w-[80%] lg:w-[83%]'>
           <DetailsCom />
         </div>
 

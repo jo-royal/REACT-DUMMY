@@ -4,6 +4,7 @@ import testImg3 from '../assets/test-three.png';
 
 
 
+// 🧪 Mock Product Data and recomended products}
 export const products = [
     {
         "id": 1,
