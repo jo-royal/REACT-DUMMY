@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function AsideShopRight() {
     return (
-        <div className='p-2 lg:p-5 flex flex-col gap-5 h-screen bg-white w-full sticky top-0 lg:pt-10'>
+        <div className='p-2 lg:p-5 flex flex-col gap-5 h-screen bg-white w-full sticky top-20 lg:pt-10'>
             <div className="w-full">
                 <div className="w-full h-full flex flex-col justify-center items-center bg-gray-100 p-4 rounded-md shadow-lg">
                     <h3 className="text-xl font-semibold text-gray-800 mb-3">Limited Time Offer!</h3>

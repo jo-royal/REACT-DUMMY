@@ -23,7 +23,7 @@ export default function Navbar() {
 
 
   return (
-    <div className={isMenuOpen ? "fixed top-0 w-full bg-white z-50 py-3 sm:py-5" : "static py-3 sm:py-5"}>
+    <div className={isMenuOpen ? "fixed top-0 w-full bg-white z-30 py-3 sm:py-5" : "static py-3 sm:py-5"}>
 
       {/* mobile navbar */}
       <nav className='sections flex justify-between max-w-[500px] sm:max-w-full md:hidden' >
