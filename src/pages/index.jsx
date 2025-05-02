@@ -9,9 +9,9 @@ import MobileSearch from '../components/mobileSearch'
 
 export default function Index() {
   return (
-    <div className=''> 
-      
-      <Navbar /> 
+    <div className=''>
+
+      <Navbar />
       <div className='mt-[40px]'>
         <MobileSearch />
       </div>
@@ -20,7 +20,6 @@ export default function Index() {
       <Logos />
       <Dotm />
       <NewArrival />
-      
     </div>
   )
 }

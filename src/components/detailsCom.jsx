@@ -81,10 +81,10 @@ export default function DetailsCom() {
 
   return (
     <section>
-      <div className="sm:px-5 m-auto w-full pb-25 lg:pb-35 flex flex-col lg:flex-row bg-white lg:pt-5 gap-2 justify-start items-start">
+      <div className="sm:px-5 m-auto w-full pb-25 lg:pb-35 flex flex-col lg:flex-row bg-white sm:pt-5 gap-2 justify-start items-start">
 
         {/** image */}
-        <div className=" flex flex-col sm:flex-row w-full lg:w-[50%] gap-1 sm:gap-5 lg:gap-1  lg:h-fit lg:sticky top-0 sm:my-5 md:my-0">
+        <div className=" flex flex-col sm:flex-row w-full lg:w-[50%] gap-1 sm:gap-5 lg:gap-1  lg:h-fit lg:sticky top-20 my-1">
           <div className="flex order-2 sm:order-1 sm:flex-col p-1 overflow-x-auto lg:overflow-y-auto gap-2 h-full w-full sm:w-auto">
             {img.map((item, index) => (
               <img

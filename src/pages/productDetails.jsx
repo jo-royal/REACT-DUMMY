@@ -7,8 +7,10 @@ import Navbar from '../components/navbar'
 export default function ProductDetails() {
   return (
     <div className='w-full max-w-[500px] sm:max-w-[1470px] mx-auto '>
-      <Navbar />
-      <div className='flex w-full gap-1 lg:pt-1 mt-8 bg-bg-shop'>
+      <div className='sticky top-0 w-full z-50 bg-white border-b-4 border-bg-shop -mb-1'>
+        <Navbar />
+      </div>
+      <div className='flex w-full gap-1 lg:pt-1  bg-bg-shop'>
         <div className='w-full md:w-[80%] lg:w-[83%]'>
           <DetailsCom />
         </div>
