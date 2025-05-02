@@ -12,6 +12,7 @@ import ShippingUpdate from "./pages/shippingUpdate";
 import Payment from "./pages/payment";
 import Cart from "./pages/cart";
 import ProductDetails from "./pages/productDetails";
+import Test from "./pages/test";
 
 
 
@@ -33,6 +34,7 @@ export default function App() {
         <Route path="/REACT-DUMMY/cart" element={< Cart />} />
         <Route path="/REACT-DUMMY/shop" element={< Shop />} />
         <Route path="/REACT-DUMMY/shop/details" element={< ProductDetails />} />
+        <Route path="/REACT-DUMMY/test/" element={< Test />} />
       </Routes>
     </BrowserRouter>
   )
