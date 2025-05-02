@@ -311,7 +311,7 @@ export default function DetailsCom() {
 
       {/** description, review, size guides */}
       <div className="w-full mt-1 ">
-        <div className="bg-white w-full justify-center flex gap-15 text-md text-secondary font-header">
+        <div className="bg-white w-full justify-between sm:justify-center flex sm:gap-15 text-md text-secondary font-header">
           <button
             className={` my-5 py-1 px-1 cursor-pointer ${activeTab === 'description' ? "border-b-2 border-accent" : ""}`}
             onClick={() => setActiveTab('description')}>

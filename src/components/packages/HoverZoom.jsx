@@ -54,20 +54,29 @@ export default function HoverZoom({ src, zoomScale = 2, className = "" }) {
 
 
         {isOpen && (
-          <div className="w-full h-full">
+          <div className="w-full h-full relative">
             <div
-              className="fixed top-0 inset-0 bg-black/90 h-full z-30"
+              className="fixed top-0 inset-0 bg-black/90 h-full z-30 w-full"
               onClick={closeImage}
             >
             </div>
 
-            <img
-              src={src}
-              alt=''
-              className={`fixed top-20 max-w-screen max-h-[90%] object-contain transition-transform duration-300 z-40 ${isZoomed ? "z-50 scale-150 cursor-zoom-out" : "scale-100 cursor-zoom-in"
-                }`}
-              onClick={toggleZoom}
-            />
+            <div className="flex flex-col items-center h-full gap-5">
+              <button
+                onClick={closeImage}
+                className="bg-white px-3 rounded-2xl z-50 fixed top-5 lg:top-20">Close
+              </button>
+
+              <div className={`fixed top-20 max-w-screen max-h-[90%] object-contain transition-transform duration-300 z-40 ${isZoomed ? "mt-8 lg:mt-20 scale-130 cursor-zoom-out" : "lg:-m-1 scale-100 cursor-zoom-in"
+                }`}>
+                <img
+                  src={src}
+                  alt=''
+                  className="w-full h-auto"
+                  onClick={toggleZoom}
+                />
+              </div>
+            </div>
           </div>
         )}
       </>
