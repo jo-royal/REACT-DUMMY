@@ -29,8 +29,6 @@ export default function Navbar() {
 
 
 
-
-
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
   };
@@ -38,6 +36,12 @@ export default function Navbar() {
   const handleBack = () => {
     setSelectedCategory(null);
   };
+
+
+  //for desktop
+  const [showCategories, setShowCategories] = useState(false);
+
+
 
   return (
     <div className={isMenuOpen ? "fixed top-0 w-full bg-white z-30 py-3 sm:py-5" : "static py-3 sm:py-5"}>
@@ -69,7 +73,36 @@ export default function Navbar() {
 
         {/* navBarLinks */}
         <ul className='flex md:gap-5 lg:gap-10'>
-          <li className='text-secondary'>Categories</li>
+          <li className='text-secondary'>
+            <div
+              className=""
+              onMouseEnter={() => setShowCategories(true)}
+              onMouseLeave={() => setShowCategories(false)}
+            >
+              <button className={showCategories ? "bg-bg-shop text-accent p-2 rounded" : ""}>
+                Categories
+              </button>
+
+              {/* Category Container */}
+              {showCategories && (
+                <div className="absolute top-15 left-8 bg-bg-shop rounded shadow-md p-4 w-3/5 z-50">
+                  <ul className="grid grid-cols-2 gap-1 w-full mt-3 font-medium">
+                    {categories.map((cat) => (
+                      <li key={cat.id} className="w-full hover:text-accent bg-white rounded p-2 h-15 cursor-pointer">
+                        <button className='flex justify-between items-center w-full h-full'>
+                          <div className='flex gap-3 h-full items-center'>
+                            <img className='h-full w-auto' src={cat.img} alt={cat.name} />
+                            <p>{cat.name}</p>
+                          </div>
+                          <p className='w-full text-end'>&gt;</p>
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          </li>
           {navBarLinks.map((item, index) => (
             <li className='text-secondary' key={index}>
               <NavLink
