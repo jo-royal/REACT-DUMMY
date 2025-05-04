@@ -1,5 +1,6 @@
 import { Gift, Gem, HandCoins, Percent } from "lucide-react";
 import productOne from "../assets/product-one.png";
+import springProduct from '../assets/spring product.png'
 
 
 export const navBarLinks = [
@@ -10,11 +11,11 @@ export const navBarLinks = [
     { label: "Contacts", href: "/REACT-DUMMY/contacts" },
 ];
 
-  export const deals = [
-    {icons: <Gift className="text-white w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" strokeWidth={1.5} />, label: "10% OFF For First Timer", href: "/"},
-    {icons: <Gem className="text-white w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" strokeWidth={1.5}/>, label: "Minus -5000 Every End Of The Month", href: "/"},
-    {icons: <HandCoins className="text-white w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" strokeWidth={1.5}/>, label: "5% Off Coupon Order Above 100,0000", href: "/"},
-    {icons: <Percent className="text-white w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" strokeWidth={1.5}/>, label: "Gifts lorem presson avengers", href: "/"},
+export const deals = [
+    { icons: <Gift className="text-white w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" strokeWidth={1.5} />, label: "10% OFF For First Timer", href: "/" },
+    { icons: <Gem className="text-white w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" strokeWidth={1.5} />, label: "Minus -5000 Every End Of The Month", href: "/" },
+    { icons: <HandCoins className="text-white w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" strokeWidth={1.5} />, label: "5% Off Coupon Order Above 100,0000", href: "/" },
+    { icons: <Percent className="text-white w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" strokeWidth={1.5} />, label: "Gifts lorem presson avengers", href: "/" },
 ];
 
 export const timer = [
@@ -24,10 +25,18 @@ export const timer = [
     { label: "Sec", time: "45" },
 ];
 
+export const dotm = [
+    { title: "01 --Spring Sale", discount: "30% OFF", image: springProduct, href: "/REACT-DUMMY/shop" },
+    { title: "02 --Spring Sale", discount: "40% OFF", image: springProduct, href: "/REACT-DUMMY/shop" },
+    { title: "03 --Spring Sale", discount: "20% OFF", image: springProduct, href: "/REACT-DUMMY/shop" },
+    { title: "04 --Spring Sale", discount: "50% OFF", image: springProduct, href: "/REACT-DUMMY/shop" },
+    { title: "05 --Spring Sale", discount: "10% OFF", image: springProduct, href: "/REACT-DUMMY/shop" }
+];
+
 export const newArrivalCatigories = [
-    { label: "Bags", href: "/REACT-DUMMY/" },
+    { label: "Highlights", href: "/REACT-DUMMY/" },
+    { label: "Bags", href: "/REACT-DUMMY/shoes" },
     { label: "Shoes", href: "/REACT-DUMMY/shoes" },
-    { label: "Jewelries", href: "/REACT-DUMMY/jewelries" },
     { label: "Clothes", href: "/REACT-DUMMY/clothes" },
     { label: "Accessories", href: "/REACT-DUMMY/accessories" },
     { label: "Cosmetics", href: "/REACT-DUMMY/comestics" },
@@ -44,9 +53,8 @@ export const newArrivalProducts = [
 
 
 export const cart = [
-    { name: "Mini dress with ruffled straps", price: "10,000", image: productOne , quantity: 1, total: "100,000"},
-    { name: "Mini dress with ruffled straps", price: "10,000", image: productOne , quantity: 1, total: "100,000"},
-    { name: "Mini dress with ruffled straps", price: "10,000", image: productOne , quantity: 1, total: "100,000"},
-    { name: "Mini dress with ruffled straps", price: "10,000", image: productOne , quantity: 1, total: "100,000"},
+    { name: "Mini dress with ruffled straps", price: "10,000", image: productOne, quantity: 1, total: "100,000" },
+    { name: "Mini dress with ruffled straps", price: "10,000", image: productOne, quantity: 1, total: "100,000" },
+    { name: "Mini dress with ruffled straps", price: "10,000", image: productOne, quantity: 1, total: "100,000" },
+    { name: "Mini dress with ruffled straps", price: "10,000", image: productOne, quantity: 1, total: "100,000" },
 ];
-  
