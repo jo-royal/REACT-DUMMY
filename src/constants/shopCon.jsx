@@ -1,6 +1,146 @@
 import testImg from '../assets/test-one.png';
 import testImg2 from '../assets/test-two.png';
 import testImg3 from '../assets/test-three.png';
+import catCloth from '../assets/cat-cloth.png';
+import catShoe from '../assets/cat-shoe.png';
+import catAcc from '../assets/cat-accessories.png';
+import catFitness from '../assets/cat-fitness.png';
+import catBabies from '../assets/cat-babies.png';
+import catBag from '../assets/cat-bag.png';
+import catBikini from '../assets/cat-bikini.png';
+import catMaternity from '../assets/cat-maternity.png';
+import catSportwear from '../assets/cat-sportwear.png';
+import catSnickers from '../assets/cat-snickers.png';
+import catJoggers from '../assets/cat-joggers.png';
+
+
+// 🧪 Mock Category Data
+export const categories = [
+    {
+        "id": 1,
+        "name": "Clothes",
+        "img": catCloth,
+        "description": "hello world, this is clothes section",
+        "subcategories": [
+            {
+                "name": "bikini",
+                "img": catBikini
+            },
+            {
+                "name": "maternity",
+                "img": catMaternity
+            },
+            {
+                "name": "sportwear",
+                "img": catSportwear
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Shoes",
+        "img": catShoe,
+        "description": "hello world, this is shoes section",
+        "subcategories": [
+            {
+                "name": "snickers",
+                "img": catSnickers
+            },
+            {
+                "name": "joggers",
+                "img": catJoggers
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Bags",
+        "img": catBag,
+        "description": "hello world, this is bags section",
+        "subcategories": [
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Bikini",
+        "img": catBikini,
+        "description": "hello world, this is bikini section",
+        "subcategories": [
+            {
+                "name": "clothes",
+                "img": catCloth
+            },
+            {
+                "name": "accessories",
+                "img": catAcc
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Accessories",
+        "img": catAcc,
+        "description": "hello world, this is accessories section",
+        "subcategories": [
+            {
+                "name": "bags",
+                "img": catBag
+            },
+            {
+                "name": "fitness",
+                "img": catFitness
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Fitness",
+        "img": catFitness,
+        "description": "hello world, this is fitness section",
+        "subcategories": [
+            {
+                "name": "clothes",
+                "img": catCloth
+            },
+            {
+                "name": "accessories",
+                "img": catAcc
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Maternity",
+        "img": catMaternity,
+        "description": "hello world, this is maternity section",
+        "subcategories": [
+            {
+                "name": "clothes",
+                "img": catCloth
+            },
+            {
+                "name": "accessories",
+                "img": catAcc
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Babies",
+        "img": catBabies,
+        "description": "hello world, this is babies section",
+        "subcategories": [
+            {
+                "name": "clothes",
+                "img": catCloth
+            },
+            {
+                "name": "accessories",
+                "img": catAcc
+            }
+        ]
+    }
+]
 
 
 

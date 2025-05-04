@@ -2,6 +2,7 @@ import { UserRound, Heart, Search, AlignJustify, X } from 'lucide-react';
 import { navBarLinks } from '../constants/firstCon';
 import { NavLink, Link } from 'react-router'
 import { useState } from 'react';
+import { categories } from '../constants/shopCon';
 
 
 export default function Navbar() {
@@ -20,6 +21,8 @@ export default function Navbar() {
         return <AlignJustify color="#484848" size={26} strokeWidth={1.5} className='' />
     }
   };
+
+  const subCategories = categories.subCategories
 
 
   return (
@@ -87,13 +90,24 @@ export default function Navbar() {
           <div className='w-full h-screen bg-black/50 fixed top-14 sm:top-18 left-0 z-40'
             onClick={toggleMenu}>
           </div>
-          <div className='w-full h-screen bg-bg-shop max-w-[500px] fixed top-14 sm:top-18 left-0 z-50 p-3 pt-7'>
-            <ul className='w-full h-full flex flex-col gap-1 text-secondary font-medium'>
+          <div className='w-full h-screen bg-bg-shop max-w-[500px] fixed top-14 sm:top-18 left-0 z-50 p-3 pt-7 overflow-y-scroll'>
+            <ul className='w-full h-fit flex flex-col gap-1 text-secondary font-medium'>
               {navBarLinks.map((link, index) => (
                 <li key={index} className='bg-white rounded p-2'>
                   <Link to={link.href} >
                     {link.label}
                   </Link>
+                </li>
+              ))}
+            </ul>
+            <h4 className='my-5 pt-5 text-xl'>Categories</h4>
+            <ul className='w-ful h-fit grid grid-cols-2 gap-2 text-secondary font-medium pb-5'>
+              {categories.map((item) => (
+                <li key={item.id} className='bg-white rounded p-2 flex justify-between items-center w-full h-15'>
+                  <div >
+                    {item.name}
+                  </div>
+                  <img className='h-full w-auto' src={item.img} alt={item.name} />
                 </li>
               ))}
             </ul>
