@@ -43,9 +43,9 @@ export default function Dotm() {
                             <Link key={index} to={item.href} className="relative w-full h-auto">
                                 <img className="h-auto w-full object-cover" src={item.image} alt={item.title} />
 
-                                <div className="absolute bottom-5 left-5 bg-white backdrop-blur-sm p-3 z-10 text-secondary">
+                                <div className="absolute bottom-5 left-5 bg-white backdrop-blur-sm p-3 z-10">
                                     <p className="">{item.title}</p>
-                                    <p className="text-2xl pt-2">{item.discount}</p>
+                                    <p className="text-2xl pt-2 text-accent">{item.discount}</p>
                                 </div>
                             </Link>
                         ))}
