@@ -113,25 +113,6 @@ export default function Navbar() {
               ))}
             </ul>
           </div>
-          <div className=' w-full h-screen bg-bg-shop max-w-[500px] fixed top-14 sm:top-18 left-0 z-50 p-3 pt-7 overflow-y-scroll ease-out duration-300'>
-            <div className='flex gap-1/2'>
-              <button className='shadow-sm px-2 py-3'>&lt;  Back</button>
-              <h4>'{categories.name}'</h4>
-            </div>
-            <ul className='w-full h-fit flex flex-col text-secondary font-medium'>
-              {subCategories.map((subItem, index) => (
-                <li key={index} className='bg-white rounded px-2 py-3 border-b border-bg-shop'>
-                  <button className='flex justify-between items-center w-full h-15'>
-                    <div >
-                      <img className='h-full w-auto' src={subItem.name} alt={subItem.img} />
-                      <div>{subItem.name}</div>
-                    </div>
-                    <p className='w-full text-end'>&gt;</p>
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </div>
         </>) :
         (null)}
     </div>
