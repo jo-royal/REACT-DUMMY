@@ -22,7 +22,7 @@ export default function Navbar() {
     }
   };
 
-  const subCategories = categories.subCategories
+  const subCategories = categories.subcategories
 
 
   return (
@@ -32,7 +32,7 @@ export default function Navbar() {
       <nav className='sections flex justify-between max-w-[500px] sm:max-w-full md:hidden' >
         <div className='flex items-center gap-4'>
           <button onClick={toggleMenu}> {menuSwitch()} </button>
-          <h1 className='text-2xl '><span className='text-accent'>PES</span>MIC</h1>
+          <Link to='/REACT-DUMMY/' className='text-2xl font-header'><span className='text-accent'>PES</span>MIC</Link>
         </div>
         <div className='flex items-center gap-4 sm:gap-5'>
           <div className="search w-40 relative border-b p-1 hidden sm:block md:hidden">
@@ -51,10 +51,11 @@ export default function Navbar() {
 
       {/* desktop navbar */}
       <nav className='sections hidden md:flex flex-row justify-between items-center'>
-        <h1 className='text-2xl '><span className='text-accent'>PES</span>MIC</h1>
+        <Link to='/REACT-DUMMY/' className='text-2xl font-header'><span className='text-accent'>PES</span>MIC</Link>
 
         {/* navBarLinks */}
         <ul className='flex md:gap-5 lg:gap-10'>
+          <li className='text-secondary'>Categories</li>
           {navBarLinks.map((item, index) => (
             <li className='text-secondary' key={index}>
               <NavLink
@@ -87,13 +88,13 @@ export default function Navbar() {
       {/* mobile navBarLinks */}
       {isMenuOpen ?
         (<>
-          <div className='w-full h-screen bg-black/50 fixed top-14 sm:top-18 left-0 z-40'
+          <div className='w-full h-screen bg-black/50 fixed top-14 sm:top-18 left-0 z-30'
             onClick={toggleMenu}>
           </div>
-          <div className='w-full h-screen bg-bg-shop max-w-[500px] fixed top-14 sm:top-18 left-0 z-50 p-3 pt-7 overflow-y-scroll'>
+          <div className='w-full h-screen bg-bg-shop max-w-[500px] fixed top-14 sm:top-18 left-0 z-40 p-3 pt-7 overflow-y-scroll'>
             <ul className='w-full h-fit flex flex-col gap-1 text-secondary font-medium'>
               {navBarLinks.map((link, index) => (
-                <li key={index} className='bg-white rounded p-2'>
+                <li key={index} className='bg-white rounded px-2 py-3'>
                   <Link to={link.href} >
                     {link.label}
                   </Link>
@@ -108,6 +109,25 @@ export default function Navbar() {
                     {item.name}
                   </div>
                   <img className='h-full w-auto' src={item.img} alt={item.name} />
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className=' w-full h-screen bg-bg-shop max-w-[500px] fixed top-14 sm:top-18 left-0 z-50 p-3 pt-7 overflow-y-scroll ease-out duration-300'>
+            <div className='flex gap-1/2'>
+              <button className='shadow-sm px-2 py-3'>&lt;  Back</button>
+              <h4>'{categories.name}'</h4>
+            </div>
+            <ul className='w-full h-fit flex flex-col text-secondary font-medium'>
+              {subCategories.map((subItem, index) => (
+                <li key={index} className='bg-white rounded px-2 py-3 border-b border-bg-shop'>
+                  <button className='flex justify-between items-center w-full h-15'>
+                    <div >
+                      <img className='h-full w-auto' src={subItem.name} alt={subItem.img} />
+                      <div>{subItem.name}</div>
+                    </div>
+                    <p className='w-full text-end'>&gt;</p>
+                  </button>
                 </li>
               ))}
             </ul>

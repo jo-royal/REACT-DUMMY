@@ -4,11 +4,10 @@ import springProduct from '../assets/spring product.png'
 
 
 export const navBarLinks = [
-    { label: "Home", href: "/REACT-DUMMY" },
-    { label: "Categories", href: "/REACT-DUMMY/login" },
     { label: "Shop", href: "/REACT-DUMMY/shop" },
     { label: "About ", href: "/REACT-DUMMY/checkout" },
     { label: "Contacts", href: "/REACT-DUMMY/contacts" },
+    { label: "login", href: "/REACT-DUMMY/login" },
 ];
 
 export const deals = [
