@@ -23,15 +23,15 @@ export const categories = [
         "description": "hello world, this is clothes section",
         "subcategories": [
             {
-                "name": "bikini",
+                "name": "Bikini",
                 "img": catBikini
             },
             {
-                "name": "maternity",
+                "name": "Maternity",
                 "img": catMaternity
             },
             {
-                "name": "sportwear",
+                "name": "Sportwear",
                 "img": catSportwear
             }
         ]
@@ -43,11 +43,11 @@ export const categories = [
         "description": "hello world, this is shoes section",
         "subcategories": [
             {
-                "name": "snickers",
+                "name": "Snickers",
                 "img": catSnickers
             },
             {
-                "name": "joggers",
+                "name": "Joggers",
                 "img": catJoggers
             }
         ]
@@ -67,11 +67,11 @@ export const categories = [
         "description": "hello world, this is bikini section",
         "subcategories": [
             {
-                "name": "clothes",
+                "name": "Clothes",
                 "img": catCloth
             },
             {
-                "name": "accessories",
+                "name": "Accessories",
                 "img": catAcc
             }
         ]
@@ -83,11 +83,11 @@ export const categories = [
         "description": "hello world, this is accessories section",
         "subcategories": [
             {
-                "name": "bags",
+                "name": "Bags",
                 "img": catBag
             },
             {
-                "name": "fitness",
+                "name": "Fitness",
                 "img": catFitness
             }
         ]
@@ -99,11 +99,11 @@ export const categories = [
         "description": "hello world, this is fitness section",
         "subcategories": [
             {
-                "name": "clothes",
+                "name": "Clothes",
                 "img": catCloth
             },
             {
-                "name": "accessories",
+                "name": "Accessories",
                 "img": catAcc
             }
         ]
@@ -115,11 +115,11 @@ export const categories = [
         "description": "hello world, this is maternity section",
         "subcategories": [
             {
-                "name": "clothes",
+                "name": "Clothes",
                 "img": catCloth
             },
             {
-                "name": "accessories",
+                "name": "Accessories",
                 "img": catAcc
             }
         ]
@@ -131,11 +131,11 @@ export const categories = [
         "description": "hello world, this is babies section",
         "subcategories": [
             {
-                "name": "clothes",
+                "name": "Clothes",
                 "img": catCloth
             },
             {
-                "name": "accessories",
+                "name": "Accessories",
                 "img": catAcc
             }
         ]

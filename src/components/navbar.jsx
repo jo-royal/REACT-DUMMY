@@ -7,7 +7,12 @@ import { categories } from '../constants/shopCon';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  //sub categories
+  const [selectedCategory, setSelectedCategory] = useState(null);
+
+
   const toggleMenu = () => {
+    setSelectedCategory(null);
     setIsMenuOpen(!isMenuOpen);
   };
 
@@ -22,8 +27,17 @@ export default function Navbar() {
     }
   };
 
-  const subCategories = categories.subcategories
 
+
+
+
+  const handleCategoryClick = (category) => {
+    setSelectedCategory(category);
+  };
+
+  const handleBack = () => {
+    setSelectedCategory(null);
+  };
 
   return (
     <div className={isMenuOpen ? "fixed top-0 w-full bg-white z-30 py-3 sm:py-5" : "static py-3 sm:py-5"}>
@@ -104,7 +118,7 @@ export default function Navbar() {
             <h4 className='my-5 pt-5 text-xl'>Categories</h4>
             <ul className='w-ful h-fit grid grid-cols-2 gap-2 text-secondary font-medium pb-5'>
               {categories.map((item) => (
-                <li key={item.id} className='bg-white rounded p-2 flex justify-between items-center w-full h-15'>
+                <li onClick={() => handleCategoryClick(item)} key={item.id} className='bg-white rounded p-2 flex justify-between items-center w-full h-15'>
                   <div >
                     {item.name}
                   </div>
@@ -115,6 +129,37 @@ export default function Navbar() {
           </div>
         </>) :
         (null)}
+
+
+      {/** subcategories updatte */}
+      {selectedCategory ? (
+        <>
+          <div className=' w-full h-screen bg-bg-shop max-w-[500px] fixed top-14 sm:top-18 left-0 z-50 p-3 pt-7 overflow-y-scroll ease-out duration-300'>
+            <div className='flex gap-15 items-center mb-5'>
+              <button onClick={handleBack} className='shadow-sm px-2 py-1 rounded bg-white'>&lt;  Back</button>
+              <h4 className=''>'{selectedCategory.name}'</h4>
+            </div>
+            <ul className='w-full h-fit flex flex-col text-secondary font-medium'>
+              {selectedCategory.subcategories.map((subItem, index) => (
+                <li key={index} className='bg-white rounded border-b border-bg-shop p-2 h-15 w-full'>
+                  <button className='flex justify-between items-center w-full h-full'>
+                    <div className='flex gap-3 h-full'>
+                      <img className='h-full w-auto' src={subItem.img} alt={subItem.name} />
+                      <p>{subItem.name}</p>
+                    </div>
+                    <p className='w-full text-end'>&gt;</p>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </>
+      ) : (null)}
+
+
     </div>
+
+
+
   )
 }
