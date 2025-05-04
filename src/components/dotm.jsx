@@ -35,27 +35,7 @@ export default function Dotm() {
                     ))}
                 </div>
             </div>
-            {/* <div className='grid grid-cols-2 gap-5 w-full overflow-x-scroll grid-flow-col'>
-                {dotm.map((item, index) => (
-                    <div key={index} className='w-full h-auto relative'>
-                        <img className=' h-auto w-full min-h-[335px]' src={item.image} alt={item.title} />
-                        <div className='bg-white absolute bottom-15 left-5 w-39 h-23 p-3 text-secondary backdrop-blur-sm z-50'>
-                            <p>{item.title}</p>
-                            <p className='text-2xl pt-3'>{item.discount}</p>
-                        </div>
-                    </div>
-                ))}
-                {dotm.map((item, index) => (
-                    <div key={index + 1} className='w-full h-full'>
-                        <img className='w-auto h-2/3' src={item.image} alt={item.title} />
-                        <div className='w-20 m-auto mt-5 flex items-center gap-5'>
-                            <button className='bg-white rounded-full text-lg shadow-sm px-2'>&lt;</button>
-                            <button className='bg-white rounded-full text-lg shadow-sm px-2'>&gt;</button>
-                        </div>
-                    </div>
-                ))}
-
-            </div> */}
+            {/* Deals of the month */}
             <div>
                 <div ref={scrollRef} className="deals-container w-full overflow-x-auto">
                     <div className="grid auto-cols-[80%] sm:auto-cols-[minmax(320px,_300px)] grid-flow-col gap-5">
@@ -63,9 +43,9 @@ export default function Dotm() {
                             <Link key={index} to={item.href} className="relative w-full h-auto">
                                 <img className="h-auto w-full object-cover" src={item.image} alt={item.title} />
 
-                                <div className="absolute bottom-5 left-5 bg-white backdrop-blur-sm p-3 z-10">
+                                <div className="absolute bottom-5 left-5 bg-white backdrop-blur-sm p-3 z-10 text-secondary">
                                     <p className="">{item.title}</p>
-                                    <p className="text-2xl pt-2 text-accent">{item.discount}</p>
+                                    <p className="text-2xl pt-2">{item.discount}</p>
                                 </div>
                             </Link>
                         ))}
