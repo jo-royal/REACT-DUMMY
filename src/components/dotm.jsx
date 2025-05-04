@@ -20,7 +20,7 @@ export default function Dotm() {
     };
 
     return (
-        <section className='sections dotm-section grid grid-cols-1 sm:grid-cols-2 justify-between gap-20 sm:gap-10 mt-30 pb-12 bg-gradient-to-b from-white to-[#FAFAFA] max-w-[500px] sm:max-w-[1470px] m-auto'>
+        <section className='sections dotm-section grid grid-cols-1 sm:grid-cols-2 justify-between gap-20 sm:gap-10 mt-20 sm:mt-30 pb-12 bg-gradient-to-b from-white to-[#FAFAFA] max-w-[500px] sm:max-w-[1470px] m-auto'>
             <div className=''>
                 <h2 className='text-3xl pb-10'>Deals Of The Month</h2>
                 <p className='mb-10'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis ultrices sollicitudin aliquam sem. Scelerisque duis ultrices sollicitudin </p>

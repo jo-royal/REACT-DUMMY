@@ -25,7 +25,7 @@ export default function NewArrival() {
             <div className='my-10'>
                 <RelatedProduct title="New Arrival" data={products} />
             </div>
-            <div className='mt-15 md:mt-25'>
+            <div className='mt-15 md:mt-20'>
                 <RelatedProduct title="Trending 🔥" data={products} />
             </div>
 

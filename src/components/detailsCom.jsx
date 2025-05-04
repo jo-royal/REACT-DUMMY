@@ -331,8 +331,13 @@ export default function DetailsCom() {
         </div>
       </div>
 
-      {/** Related Products */}
+      {/** Alternative Sellers */}
       <div className="w-full py-20 bg-white">
+        <RelatedProduct title={'Alternative Sellers'} data={products} />
+      </div>
+
+      {/** Related Products */}
+      <div className="w-full pb-20 bg-white">
         <RelatedProduct title={'Related Products'} data={products} />
       </div>
 
