@@ -9,6 +9,10 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   //sub categories
   const [selectedCategory, setSelectedCategory] = useState(null);
+  const [selectedCategoryDesktop, setSelectedCategoryDesktop] = useState(null);
+
+  //for desktop
+  const [showCategories, setShowCategories] = useState(false);
 
 
   const toggleMenu = () => {
@@ -33,13 +37,18 @@ export default function Navbar() {
     setSelectedCategory(category);
   };
 
-  const handleBack = () => {
-    setSelectedCategory(null);
+  const handleCategoryClickDesktop = (category) => {
+    setSelectedCategoryDesktop(category);
   };
 
 
-  //for desktop
-  const [showCategories, setShowCategories] = useState(false);
+  const handleBack = () => {
+    setSelectedCategory(null);
+    setSelectedCategoryDesktop(null);
+    setShowCategories(true);
+  };
+
+
 
 
 
@@ -83,16 +92,16 @@ export default function Navbar() {
                 Categories
               </button>
 
-              {/* Category Container */}
+              {/* Categories Container desktop */}
               {showCategories && (
-                <div className="absolute top-15 left-8 bg-bg-shop rounded shadow-md p-4 w-3/5 z-50">
+                <div className="absolute top-15 left-8 bg-bg-shop rounded shadow-md p-4 w-3/5 z-40">
                   <ul className="grid grid-cols-2 gap-1 w-full mt-3 font-medium">
-                    {categories.map((cat) => (
-                      <li key={cat.id} className="w-full hover:text-accent bg-white rounded p-2 h-15 cursor-pointer">
+                    {categories.map((category) => (
+                      <li key={category.id} onClick={() => handleCategoryClickDesktop(category)} className="w-full hover:text-accent bg-white rounded p-2 h-15 cursor-pointer">
                         <button className='flex justify-between items-center w-full h-full'>
                           <div className='flex gap-3 h-full items-center'>
-                            <img className='h-full w-auto' src={cat.img} alt={cat.name} />
-                            <p>{cat.name}</p>
+                            <img className='h-full w-auto' src={category.img} alt={category.name} />
+                            <p>{category.name}</p>
                           </div>
                           <p className='w-full text-end'>&gt;</p>
                         </button>
@@ -101,7 +110,36 @@ export default function Navbar() {
                   </ul>
                 </div>
               )}
+
             </div>
+
+            {/* subCategories Container desktop*/}
+            {selectedCategoryDesktop ? (
+              <div
+                className="absolute top-15 left-8 bg-bg-shop rounded shadow-md p-4 w-3/5 z-50"
+                onMouseLeave={() => setSelectedCategoryDesktop(false)}>
+                <div className='grid grid-cols-2 justify-between items-center'>
+                  <button className='p-2 m-5 rounded bg-white shadow w-fit' onClick={handleBack}>← Back
+                  </button>
+                  <h3 className='text-lg font-medium text-accent'>{selectedCategoryDesktop.name}</h3>
+                </div>
+                <ul className="grid grid-cols-2 gap-1 w-full mt-3 font-medium">
+                  {selectedCategoryDesktop.subcategories.map((category, index) => (
+                    <li key={index} className="w-full hover:text-accent bg-white rounded p-2 h-15 cursor-pointer">
+                      <button className='flex justify-between items-center w-full h-full'>
+                        <div className='flex gap-3 h-full items-center'>
+                          <img className='h-full w-auto' src={category.img} alt={category.name} />
+                          <p>{category.name}</p>
+                        </div>
+                        <p className='w-full text-end'>&gt;</p>
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ) : null}
+
+            {/** other nav links */}
           </li>
           {navBarLinks.map((item, index) => (
             <li className='text-secondary' key={index}>
