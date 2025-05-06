@@ -14,6 +14,47 @@ import catSnickers from '../assets/cat-snickers.png';
 import catJoggers from '../assets/cat-joggers.png';
 
 
+{/* cart */ }
+export const cart = [
+    {
+        "cartTotalPrice": 127000.0,
+        "cartTotalWeight": 2.4,
+        "items": [
+            {
+                "product": "adidas jordan 150",
+                "quantity": 1,
+                "product_variations": {
+                    "color": {
+                        "color": "green",
+                        "image": "http://127.0.0.1:8000/media/adidas_jordan.jpeg"
+                    },
+                    "size": "S",
+                    "price": "30000.00",
+                    "sales_price": "25000.00"
+                },
+                "created": "2025-04-23T00:15:13.328750Z",
+                "totalProductPrice": 25000.0
+            },
+            {
+                "product": "air max 190",
+                "quantity": 3,
+                "product_variations": {
+                    "color": {
+                        "color": "white",
+                        "image": "http://127.0.0.1:8000/media/NIKEAIRMAX_copy_7XhmVuD.png"
+                    },
+                    "size": "L",
+                    "price": "40000.00",
+                    "sales_price": "34000.00"
+                },
+                "created": "2025-04-23T00:24:49.453016Z",
+                "totalProductPrice": 102000.0
+            }
+        ]
+    }
+]
+
+
 // 🧪 Mock Category Data
 export const categories = [
     {
@@ -141,7 +182,6 @@ export const categories = [
         ]
     }
 ]
-
 
 
 // 🧪 Mock Product Data and recomended products}

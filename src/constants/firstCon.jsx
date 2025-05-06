@@ -50,10 +50,3 @@ export const newArrivalProducts = [
     { name: "Product Six", price: "60,000", image: productOne },
 ];
 
-
-export const cart = [
-    { name: "Mini dress with ruffled straps", price: "10,000", image: productOne, quantity: 1, total: "100,000" },
-    { name: "Mini dress with ruffled straps", price: "10,000", image: productOne, quantity: 1, total: "100,000" },
-    { name: "Mini dress with ruffled straps", price: "10,000", image: productOne, quantity: 1, total: "100,000" },
-    { name: "Mini dress with ruffled straps", price: "10,000", image: productOne, quantity: 1, total: "100,000" },
-];
