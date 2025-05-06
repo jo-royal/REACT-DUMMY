@@ -21,12 +21,12 @@ export const cart = [
         "cartTotalWeight": 2.4,
         "items": [
             {
-                "product": "adidas jordan 150",
+                "product": "Mini dress with ruffled straps",
                 "quantity": 1,
                 "product_variations": {
                     "color": {
                         "color": "green",
-                        "image": "http://127.0.0.1:8000/media/adidas_jordan.jpeg"
+                        "image": testImg
                     },
                     "size": "S",
                     "price": "30000.00",
@@ -36,12 +36,12 @@ export const cart = [
                 "totalProductPrice": 25000.0
             },
             {
-                "product": "air max 190",
+                "product": "Air max 190",
                 "quantity": 3,
                 "product_variations": {
                     "color": {
                         "color": "white",
-                        "image": "http://127.0.0.1:8000/media/NIKEAIRMAX_copy_7XhmVuD.png"
+                        "image": testImg3
                     },
                     "size": "L",
                     "price": "40000.00",
