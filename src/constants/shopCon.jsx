@@ -21,7 +21,7 @@ export const cart = [
         "cartTotalWeight": 2.4,
         "items": [
             {
-                "product": "Mini dress with ruffled straps",
+                "product": "Mini dress with ruffled straps longs words testing",
                 "quantity": 1,
                 "product_variations": {
                     "color": {
