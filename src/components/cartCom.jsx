@@ -11,20 +11,12 @@ export default function CartCom() {
 
 
 
-  const increaseQuant = () => {
-    setQuant(quant + 1);
-  }
-  const decreaseQuant = () => {
-    setQuant(quant - 1);
-  }
-
-
   return (
     <div className='p-3 sm:p-5 my-10'>
       <table className='w-full'>
         <thead>
-          <tr className=''>
-            <th className='font-medium w-[50%]'>Product</th>
+          <tr className='border-bg-shop border-b-3'>
+            <th className='font-medium w-[45%]'>Product</th>
             <th className='font-medium '>Price</th>
             <th className='font-medium'>Quantity</th>
             <th className='font-medium'>Total</th>
@@ -42,8 +34,10 @@ export default function CartCom() {
                       className="w-full h-auto object-cover"
                     />
                   </div>
-                  <div className='flex-1 h-auto py-1'>
+                  <div className='flex-1 h-auto py-1 flex flex-col justify-between'>
                     <h5>{item.product}</h5>
+                    <p>Size: {item.product_variations.size} || Color: {item.product_variations.color.color}</p>
+                    <button className='border-b border-border w-fit'>Remove</button>
                   </div>
                 </div>
               </td>
@@ -54,14 +48,14 @@ export default function CartCom() {
                 </div>
               </td>
               <td>
-                <div className='border border-bg-shop px-3 py-1 flex w-fit h-fit'>
+                <div className='border border-bg-shop px-2 flex w-fit h-fit rounded gap-1.5'>
                   <button
                     className='text-lg p-1'>+</button>
-                  <p className="p-1">{quant}</p>
+                  <p className="p-1 text-lg">{item.quantity}</p>
                   <button className='tex-lg p-1'>−</button>
                 </div>
-
               </td>
+              <td><h5>₦{item.totalProductPrice.toLocaleString()}</h5></td>
             </tr>
           ))}
         </tbody>
