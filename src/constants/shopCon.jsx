@@ -26,7 +26,7 @@ export const cart = [
                 "product_variations": {
                     "color": {
                         "color": "green",
-                        "image": testImg
+                        "image": testImg2
                     },
                     "size": "S",
                     "price": "30000.00",

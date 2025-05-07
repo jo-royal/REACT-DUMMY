@@ -1,10 +1,10 @@
 import React from 'react'
 import { colorClasses } from '../constants/colorList';
-import { ShoppingCart, Heart } from 'lucide-react';
+import { Heart } from 'lucide-react';
 import { Link } from 'react-router';
 
 export default function ProductCard({ title, img, vendor, rating, colors, sizes, price, salesPrice, slug }) {
-
+    const discount = Math.floor(((salesPrice - price) / price) * 100);
 
     return (
         <div className='w-full'>
@@ -60,6 +60,7 @@ export default function ProductCard({ title, img, vendor, rating, colors, sizes,
                             <>
                                 <span className="text-accent font-semibold md:text-lg">₦{salesPrice}</span>
                                 <span className="text-gray-400 font-jost line-through text-sm hidden sm:block">₦{price}</span>
+                                <span className="font-jost font-semibold text-accent text-[12px] sm:hidden -mt-1">{discount}%</span>
                             </>
                         ) : (
                             <span className="text-gray-900 font-semibold text-lg">₦{price}</span>
