@@ -100,6 +100,7 @@ export default function ReviewProduct() {
                             </div>
                         </div>
                     ))}
+                    <div className='w-full flex justify-between'></div>
                 </div>
             </div>
         </div >

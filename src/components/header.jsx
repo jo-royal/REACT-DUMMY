@@ -13,7 +13,7 @@ export default function Header() {
         <div className='header min-h-[110px]'>
           <img className='w-full min-h-[110px] h-auto ' src={headert} alt="pesmic header" />
         </div>
-        <div className='text-center flex flex-col justify-center items-center sm:gap-3 lg:gap-0'>
+        <div className='text-center flex-1 py-5 flex flex-col justify-between items-center'>
           <h1 className="text-secondary text-5xl font-body ">WOMEN</h1>
           <h1 className="stext text-secondary text-7xl lg:text-8xl font-body">WORLD</h1>
           <h6 className="text-secondary text-xl font-body mb-5 lg:mb-4">COLLECTIONS</h6>
