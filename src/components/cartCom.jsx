@@ -64,7 +64,7 @@ export default function CartCom() {
       </div>
 
       {/** mobile views */}
-      <div className='px-3 border-t-2 border-border w-full my-5  sm:hidden max-w-[500px] m-auto '>
+      <div className='px-3 border-t-3 border-bg-shop w-full my-5  sm:hidden max-w-[500px] m-auto '>
         {cartItems.map((item, index) => (
           <div key={index} className='w-full py-3 border-b border-bg-shop flex justify-between'>
             <div className='flex gap-2 w-2/3'>
@@ -93,7 +93,7 @@ export default function CartCom() {
         ))}
       </div>
 
-      <div className='px-5 pb-5 w-full m-auto flex flex-col max-w-[500px] sm:max-w-[50%] lg:max-w-[500px] sticky bottom-0 sm:bottom-auto sm:absolute sm:right-5 bg-white border-t-2 border-border'>
+      <div className='px-5 pt-1 pb-3 w-full m-auto flex flex-col max-w-[500px] sm:max-w-[50%] lg:max-w-[500px] sticky bottom-0 sm:bottom-auto sm:absolute sm:right-5 bg-white border-t-3 border-bg-shop'>
         <div className='flex justify-between text-md p-2 w-full'>
           <h6>Total</h6>
           <h6>{cartTotalPrice}</h6>
