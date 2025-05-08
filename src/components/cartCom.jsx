@@ -93,7 +93,7 @@ export default function CartCom() {
         ))}
       </div>
 
-      <div className='px-5 pt-1 pb-3 w-full m-auto flex flex-col max-w-[500px] sm:max-w-[50%] lg:max-w-[500px] sticky bottom-0 sm:bottom-auto sm:absolute sm:right-5 bg-white border-t-3 border-bg-shop'>
+      <div className='px-5 py-2 w-full m-auto flex flex-col max-w-[500px] sm:max-w-[50%] lg:max-w-[500px] sticky bottom-0 sm:bottom-auto sm:absolute sm:right-5 bg-white border-t-3 border-bg-shop'>
         <div className='flex justify-between text-md p-2 w-full'>
           <h6>Total</h6>
           <h6>{cartTotalPrice}</h6>
