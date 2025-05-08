@@ -100,7 +100,10 @@ export default function ReviewProduct() {
                             </div>
                         </div>
                     ))}
-                    <div className='w-full flex justify-between'></div>
+                    <div className='w-full flex justify-center gap-10 text-white text-lg mt-10'>
+                        <button className='card bg-black py-1 px-3 cursor-pointer hover:bg-accent'>&lt;</button>
+                        <button className='card bg-black py-1 px-3 cursor-pointer hover:bg-accent'>&gt;</button>
+                    </div>
                 </div>
             </div>
         </div >
