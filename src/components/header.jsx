@@ -5,7 +5,7 @@ import headert from '../assets/headert.png'
 
 export default function Header() {
   return (
-    <header className='sections grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 lg:gap-20 mt-10 sm:mt-16 max-w-[500px] sm:max-w-[1470px]'>
+    <header className='sections grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 lg:gap-20 mt-8 max-w-[500px] sm:max-w-[1470px]'>
       <div className='header h-[550px] hidden md:block '>
 
       </div>

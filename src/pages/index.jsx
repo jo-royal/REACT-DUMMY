@@ -12,7 +12,7 @@ export default function Index() {
     <div className=''>
 
       <Navbar />
-      <div className='mt-[40px]'>
+      <div className='mt-[35px]'>
         <MobileSearch />
       </div>
       <Deals />
