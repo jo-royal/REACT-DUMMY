@@ -4,7 +4,7 @@ import { cart } from '../constants/shopCon'
 export default function CartCom() {
 
   const cartItems = cart[0].items;
-  const cartTotalPrice = cart[0].cartTotalPrice;
+  const cartTotalPrice = cart[0].cartTotalPrice.toLocaleString();
 
 
   const [quant, setQuant] = useState(null)
@@ -12,9 +12,9 @@ export default function CartCom() {
 
 
   return (
-    <>
+    <div className='relative'>
       {/** big views */}
-      <div className='p-3 sm:p-5 my-10 hidden sm:block'>
+      <div className='p-3 hidden sm:block '>
         <table className='w-full'>
           <thead>
             <tr className='border-bg-shop border-b-3 w-full'>
@@ -24,7 +24,7 @@ export default function CartCom() {
               <th className='font-medium'>Total</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className=''>
             {cartItems.map((item, index) => (
               <tr key={index} className='border-b border-bg-shop w-full'>
                 <td>
@@ -64,9 +64,9 @@ export default function CartCom() {
       </div>
 
       {/** mobile views */}
-      <div className='px-3 border-t-2 border-b-2 border-bg-shop w-full mt-5'>
+      <div className='px-3 border-t-2 border-border w-full my-5  sm:hidden max-w-[500px] m-auto '>
         {cartItems.map((item, index) => (
-          <div key={index} className='w-full py-2 border-b border-bg-shop flex justify-between'>
+          <div key={index} className='w-full py-3 border-b border-bg-shop flex justify-between'>
             <div className='flex gap-2 w-2/3'>
               <div className='w-20 h-fit'>
                 <img
@@ -80,7 +80,7 @@ export default function CartCom() {
                 <p>Color: {item.product_variations.color.color}</p>
                 <div className='border border-border px-2 flex w-fit h-fit rounded gap-2'>
                   <button className=''>+</button>
-                  <p className="">{item.quantity}</p>
+                  <p className="px-1">{item.quantity}</p>
                   <button className=''>−</button>
                 </div>
               </div>
@@ -92,6 +92,14 @@ export default function CartCom() {
           </div>
         ))}
       </div>
-    </>
+
+      <div className='px-5 pb-5 w-full m-auto flex flex-col max-w-[500px] sm:max-w-[50%] lg:max-w-[500px] sticky bottom-0 sm:bottom-auto sm:absolute sm:right-5 bg-white border-t-2 border-border'>
+        <div className='flex justify-between text-md p-2 w-full'>
+          <h6>Total</h6>
+          <h6>{cartTotalPrice}</h6>
+        </div>
+        <button className='card bg-black hover:bg-accent cursor-pointer text-white py-2 mt-10 w-full'>Checkout</button>
+      </div>
+    </div>
   )
 }

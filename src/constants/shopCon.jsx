@@ -49,6 +49,66 @@ export const cart = [
                 },
                 "created": "2025-04-23T00:24:49.453016Z",
                 "totalProductPrice": 102000.0
+            },
+            {
+                "product": "Air max 190",
+                "quantity": 3,
+                "product_variations": {
+                    "color": {
+                        "color": "white",
+                        "image": testImg3
+                    },
+                    "size": "L",
+                    "price": "40000.00",
+                    "sales_price": "34000.00"
+                },
+                "created": "2025-04-23T00:24:49.453016Z",
+                "totalProductPrice": 102000.0
+            },
+            {
+                "product": "Air max 190",
+                "quantity": 3,
+                "product_variations": {
+                    "color": {
+                        "color": "white",
+                        "image": testImg3
+                    },
+                    "size": "L",
+                    "price": "40000.00",
+                    "sales_price": "34000.00"
+                },
+                "created": "2025-04-23T00:24:49.453016Z",
+                "totalProductPrice": 102000.0
+            },
+            {
+                "product": "Air max 190",
+                "quantity": 3,
+                "product_variations": {
+                    "color": {
+                        "color": "white",
+                        "image": testImg3
+                    },
+                    "size": "L",
+                    "price": "40000.00",
+                    "sales_price": "34000.00"
+                },
+                "created": "2025-04-23T00:24:49.453016Z",
+                "totalProductPrice": 102000.0
+            },
+            {
+                "product": "Air test down",
+                "quantity": 3,
+                "product_variations": {
+                    "color": {
+                        "color": "white",
+                        "image": testImg3
+                    },
+                    "size": "L",
+                    "price": "40000.00",
+                    "sales_price": "34000.00"
+                },
+                "created": "2025-04-23T00:24:49.453016Z",
+                "totalProductPrice": 102000.0
             }
         ]
     }

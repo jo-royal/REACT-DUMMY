@@ -12,6 +12,7 @@ export default function Cart() {
       </div>
       <PageNav title={'Cart'} subtitle={'Your Cart'} />
       <CartCom />
+      <div className='h-1000 w-full'></div>
     </section>
   )
 }
