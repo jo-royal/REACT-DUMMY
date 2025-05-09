@@ -1,10 +1,13 @@
-import { http } from 'msw';
+import { http, HttpResponse } from 'msw';
+import { categories as initialCategories } from '../constants/shopCon';
+
+let categories = [...initialCategories]; // local memory variable
+
+const catURL = '/categories' 
 
 export const handlers = [
-    http.get('http://localhost:3000/api/products', (req, res, ctx) => {
-    return res(
-      ctx.status(200),
-      ctx.json([])
-    );
-  }),
-];
+    //Get all categories
+    http.get(catURL, () => {
+        return HttpResponse.json(categories);
+      }),
+]

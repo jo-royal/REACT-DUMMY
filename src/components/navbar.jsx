@@ -1,11 +1,29 @@
 import { UserRound, Heart, Search, AlignJustify, X } from 'lucide-react';
 import { navBarLinks } from '../constants/firstCon';
 import { NavLink, Link } from 'react-router'
-import { useState } from 'react';
-import { categories } from '../constants/shopCon';
+import { useState, useEffect } from 'react';
+import { fetchCategories } from '../services/categoriesService';
 
 
 export default function Navbar() {
+
+
+  useEffect(() => {
+    const loadCatSession = async () => {
+      const catSession = sessionStorage.getItem('categories');
+      if (catSession) {
+        setCategories(JSON.parse(catSession));
+      } else {
+        const apiData = await fetchCategories();
+        setCategories(apiData);
+        sessionStorage.setItem('categories', JSON.stringify(apiData));
+      }
+    };
+
+    loadCatSession();
+  }, [])
+
+  const [categories, setCategories] = useState([]);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   //sub categories
   const [selectedCategory, setSelectedCategory] = useState(null);

@@ -25,9 +25,7 @@ prepare().then(() => {
 
 
 
-
-
-//** uncomment this for production and delete from line 15 to end */ 
+//** uncomment this for production */ 
 
 // createRoot(document.getElementById('root')).render(
 //   <StrictMode>
