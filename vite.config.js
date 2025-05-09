@@ -7,5 +7,10 @@ export default defineConfig({
   plugins: [react(),
     tailwindcss(),
   ],
-  base: "/REACT-DUMMY",
+  base: "/REACT-DUMMY/", // <<< for github
+  server: { // <<< for mock data
+    headers: {
+      'Service-Worker-Allowed': '/',   // <<< ADD THIS!
+    }
+  }
 })
