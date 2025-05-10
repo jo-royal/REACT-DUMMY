@@ -6,7 +6,7 @@ import PageNav from '../components/pageNav'
 
 export default function Cart() {
   return (
-    <section>
+    <section className='max-w-[500px] sm:max-w-[1470px] m-auto'>
       <div className='sticky top-0 w-full z-50 bg-white border-b-4 border-bg-shop'>
         <Navbar />
       </div>
