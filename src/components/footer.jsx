@@ -1,10 +1,10 @@
 import { Link } from 'react-router'
-import { medias } from '../constants/firstCon'
+import { apps, careers, medias, quickLinks } from '../constants/firstCon'
 
 export default function Footer() {
     return (
         <footer className="mt-30 mb-5 px-5 border-t-4 border-bg-shop">
-            <div className="grid grid-cols-3 pt-10">
+            <div className="grid grid-cols-3 gap-10 pt-10">
                 <div className='flex flex-col gap-6'>
                     <Link to='/REACT-DUMMY/' className='text-2xl font-header'><span className='text-accent'>PES</span>MIC</Link>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur facilis iusto ea sit nesciunt architecto eum repellat quibusdam itaque velit fuga, rerum ad natus accusantium.</p>
@@ -19,15 +19,36 @@ export default function Footer() {
                         </ul>
                     </div>
                 </div>
-                <div className='flex '>
-                    <div>
-                        <h5>Quick Links</h5>
+                <div className='flex justify-between px-5'>
+                    <div className='flex flex-col gap-5'>
+                        <h5 className='font-body text-lg'>Quick Links</h5>
+                        <ul>
+                            {quickLinks.map((links, index) => (
+                                <li className='py-1' key={index}><Link to={links.href}>{links.label}</Link></li>
+
+                            ))}
+                        </ul>
                     </div>
-                    <div>
-                        <h5>Careers</h5>
+                    <div className='flex flex-col gap-5 '>
+                        <h5 className='font-body text-lg'>Careers</h5>
+                        <ul>
+                            {careers.map((links, index) => (
+                                <li className='py-1' key={index}><Link to={links.href}>{links.label}</Link></li>
+
+                            ))}
+                        </ul>
                     </div>
                 </div>
-                <div></div>
+                <div className='flex flex-col gap-5'>
+                    <h5 className='font-body text-lg'>Install Our App</h5>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem, assumenda.</p>
+                    <div className="flex w-full gap-7">
+                        {apps.map((app, index) => (
+                            <Link key={index} to={app.href}> <img className='w-30 h-auto rounded-md' src={app.image} alt="pesmic apps" /></Link>
+
+                        ))}
+                    </div>
+                </div>
             </div>
         </footer>
     )

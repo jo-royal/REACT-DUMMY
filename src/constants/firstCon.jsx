@@ -1,6 +1,9 @@
 import { Gift, Gem, HandCoins, Percent, Instagram, Twitter, Facebook, Youtube } from "lucide-react";
 import productOne from "../assets/product-one.png";
 import springProduct from '../assets/spring product.png'
+import googleIcon from '../assets/google-store.png'
+import appIcon from '../assets/app-store.png'
+
 
 
 export const navBarLinks = [
@@ -42,7 +45,7 @@ export const newArrivalCatigories = [
 ];
 
 export const newArrivalProducts = [
-    { name: "Product One", price: "10,000", image: productOne },
+    { image: productOne },
     { name: "Product Two", price: "20,000", image: productOne },
     { name: "Product Three", price: "30,000", image: productOne },
     { name: "Product Four", price: "40,000", image: productOne },
@@ -58,10 +61,11 @@ export const medias = [
 ];
 
 export const quickLinks = [
+    { label: "Contacts", href: "/REACT-DUMMY/contacts" },
     { label: "Shop", href: "/REACT-DUMMY/shop" },
     { label: "About ", href: "/REACT-DUMMY/checkout" },
-    { label: "Contacts", href: "/REACT-DUMMY/contacts" },
     { label: "Login", href: "/REACT-DUMMY/login" },
+    { label: "Register", href: "/REACT-DUMMY/register" },
 ];
 
 export const careers = [
@@ -69,4 +73,9 @@ export const careers = [
     { label: "Models ", href: "/REACT-DUMMY/checkout" },
     { label: "Manufacturer", href: "/REACT-DUMMY/contacts" },
     { label: "Developers", href: "/REACT-DUMMY/login" },
+];
+
+export const apps = [
+    { image: appIcon, href: '/' },
+    { image: googleIcon, href: '/' },
 ];
