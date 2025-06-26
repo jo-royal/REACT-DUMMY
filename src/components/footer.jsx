@@ -4,8 +4,8 @@ import { apps, careers, medias, quickLinks } from '../constants/firstCon'
 export default function Footer() {
     return (
         <footer className="mt-30 mb-2 border-t-4 border-bg-shop w-full">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-20 sm:gap-10 pt-10 px-5 max-w-[500px] sm:max-w-[1470px] m-auto">
-                <div className='flex flex-col gap-6'>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-15 sm:gap-10 pt-10 px-5 max-w-[500px] sm:max-w-[1470px] m-auto">
+                <div className='flex flex-col gap-6 sm:order-last md:order-first sm:col-span-2 md:col-span-1'>
                     <Link to='/REACT-DUMMY/' className='text-2xl font-header'><span className='text-accent'>PES</span>MIC</Link>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur facilis iusto ea sit nesciunt architecto eum repellat quibusdam itaque velit fuga, rerum ad natus accusantium.</p>
                     <div className='flex flex-col gap-4'>
@@ -19,7 +19,7 @@ export default function Footer() {
                         </ul>
                     </div>
                 </div>
-                <div className='flex flex-col gap-5 sm:order-last'>
+                <div className='flex flex-col gap-5 md:order-last'>
                     <h5 className='font-body text-lg'>Install Our App</h5>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem, assumenda.</p>
                     <div className="flex w-full gap-7">
