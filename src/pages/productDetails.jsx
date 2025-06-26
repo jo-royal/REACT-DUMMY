@@ -1,7 +1,8 @@
-import React from 'react'
+
 import DetailsCom from '../components/detailsCom'
 import AsideShopRight from '../components/asideShopRight'
 import Navbar from '../components/navbar'
+import Footer from '../components/footer'
 
 
 export default function ProductDetails() {
@@ -20,7 +21,7 @@ export default function ProductDetails() {
         </div>
 
       </div>
-
+      <Footer />
     </div>
   )
 }
