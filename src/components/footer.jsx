@@ -3,12 +3,12 @@ import { apps, careers, medias, quickLinks } from '../constants/firstCon'
 
 export default function Footer() {
     return (
-        <footer className="mt-30 mb-5 px-5 border-t-4 border-bg-shop">
-            <div className="grid grid-cols-3 gap-10 pt-10">
+        <footer className="mt-30 mb-2 border-t-4 border-bg-shop w-full">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-20 sm:gap-10 pt-10 px-5 max-w-[500px] sm:max-w-[1470px] m-auto">
                 <div className='flex flex-col gap-6'>
                     <Link to='/REACT-DUMMY/' className='text-2xl font-header'><span className='text-accent'>PES</span>MIC</Link>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur facilis iusto ea sit nesciunt architecto eum repellat quibusdam itaque velit fuga, rerum ad natus accusantium.</p>
-                    <div className='flex flex-col gap-2'>
+                    <div className='flex flex-col gap-4'>
                         <h6>Follow Us:</h6>
                         <ul className='flex gap-3'>
                             {medias.map((media, index) => (
@@ -19,7 +19,16 @@ export default function Footer() {
                         </ul>
                     </div>
                 </div>
-                <div className='flex justify-between px-5'>
+                <div className='flex flex-col gap-5 sm:order-last'>
+                    <h5 className='font-body text-lg'>Install Our App</h5>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem, assumenda.</p>
+                    <div className="flex w-full gap-7">
+                        {apps.map((app, index) => (
+                            <Link key={index} to={app.href}> <img className='w-30 h-auto rounded-md' src={app.image} alt="pesmic apps" /></Link>
+                        ))}
+                    </div>
+                </div>
+                <div className='flex justify-between sm:px-5 '>
                     <div className='flex flex-col gap-5'>
                         <h5 className='font-body text-lg'>Quick Links</h5>
                         <ul>
@@ -39,16 +48,9 @@ export default function Footer() {
                         </ul>
                     </div>
                 </div>
-                <div className='flex flex-col gap-5'>
-                    <h5 className='font-body text-lg'>Install Our App</h5>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem, assumenda.</p>
-                    <div className="flex w-full gap-7">
-                        {apps.map((app, index) => (
-                            <Link key={index} to={app.href}> <img className='w-30 h-auto rounded-md' src={app.image} alt="pesmic apps" /></Link>
-
-                        ))}
-                    </div>
-                </div>
+            </div>
+            <div className='border-y-4 border-bg-shop w-full mt-10 p-5 '>
+                <p className='text-center max-w-[500px] sm:max-w-[1470px]'>© 2025 PEMIC COLLECTION. Trademarks and brands are the property of their respective owners.</p>
             </div>
         </footer>
     )
