@@ -1,8 +1,9 @@
-import React from 'react'
+
 import Navbar from '../components/navbar'
 import AsideShop from '../components/asideShop'
 import MainShop from '../components/mainShop'
 import AsideShopRight from '../components/asideShopRight'
+import Footer from '../components/footer'
 
 
 export default function Shop() {
@@ -22,6 +23,7 @@ export default function Shop() {
           < AsideShopRight />
         </aside>
       </div>
+      <Footer />
     </>
 
 
