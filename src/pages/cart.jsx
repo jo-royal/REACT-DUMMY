@@ -1,7 +1,8 @@
-import React from 'react'
+
 import Navbar from '../components/navbar'
 import CartCom from '../components/cartCom'
 import PageNav from '../components/pageNav'
+import Footer from '../components/footer'
 
 
 export default function Cart() {
@@ -12,7 +13,7 @@ export default function Cart() {
       </div>
       <PageNav title={'Cart'} subtitle={'Your Cart'} />
       <CartCom />
-      <div className='h-1000 w-full'></div>
+      <Footer />
     </section>
   )
 }
