@@ -5,51 +5,51 @@ import { cartItems } from '../constants/userFlowCon';
 
 
 export default function CheckoutCom() {
-const sub_total = 100000;
-const weight_total = "1.4kg";
-const shipping_cost = 250;
-const vat = "4%";
-const Total = 104500;
+  const sub_total = 100000;
+  const weight_total = "1.4kg";
+  const shipping_cost = 250;
+  const vat = "4%";
+  const Total = 104500;
 
-const navigate = useNavigate();
+  const navigate = useNavigate();
 
-const handlePaystack = () => {
-  const handler = window.PaystackPop.setup({
-    key: "pk_test_581caa7a5f4ffaac83cb9a4e242238e4ad997202", // Replace with your public test key
-    email: "customer@example.com",
-    amount: Total, // Amount in kobo (₦100)
-    currency: "NGN",
-    ref: "ref_" + Math.floor(Math.random() * 1000000000 + 1),
+  const handlePaystack = () => {
+    const handler = window.PaystackPop.setup({
+      key: "pk_test_581caa7a5f4ffaac83cb9a4e242238e4ad997202", // Replace with your public test key
+      email: "customer@example.com",
+      amount: Total, // Amount in kobo (₦100)
+      currency: "NGN",
+      ref: "ref_" + Math.floor(Math.random() * 1000000000 + 1),
 
-    callback: (response) => {
-      alert("Payment successful! Ref: " + response.reference);
-      navigate("/REACT-DUMMY/payment"); // 🚀 auto-redirect on success
-    },
-    onClose: () => {
-      alert("Payment not successful! Please try again.");
-    },
-  });
+      callback: (response) => {
+        alert("Payment successful! Ref: " + response.reference);
+        navigate("/REACT-DUMMY/payment"); // 🚀 auto-redirect on success
+      },
+      onClose: () => {
+        alert("Payment not successful! Please try again.");
+      },
+    });
 
-  handler.openIframe();
-};
+    handler.openIframe();
+  };
 
 
   return (
-    <div className='bg-deals sections mt-10 mb-10 sm:mb-0'>
-      <div className='flex justify-center w-full max-w-[500px] sm:max-w-[1470px] m-auto'>
+    <div className='bg-deals px-2 mt-10 mb-10 sm:mb-0'>
+      <div className='px-3 flex justify-center w-full max-w-[500px] sm:max-w-[1470px] m-auto'>
         <div className='step-line'>
-            <div className='step-num bg-accent'> <Check strokeWidth={1.5} /> </div>
-            <div className='text-sm sm:text-base'>Shipping</div>
+          <div className='step-num bg-accent'> <Check strokeWidth={1.5} /> </div>
+          <div className='text-sm sm:text-base'>Shipping</div>
         </div>
         <div className='step mt-3 bg-accent'></div>
         <div className='step-line'>
-            <div className='step-num bg-accent'>2</div>
-            <div className='text-sm sm:text-base'>Checkout</div>
+          <div className='step-num bg-accent'>2</div>
+          <div className='text-sm sm:text-base'>Checkout</div>
         </div>
         <div className='step mt-3 bg-gray-400'></div>
         <div className='step-line'>
-            <div className='step-num bg-gray-400'>3</div>
-            <div className='text-sm sm:text-base'>Payment</div>
+          <div className='step-num bg-gray-400'>3</div>
+          <div className='text-sm sm:text-base'>Payment</div>
         </div>
       </div>
 
@@ -58,49 +58,49 @@ const handlePaystack = () => {
 
       <div className='card md:flex justify-between w-full my-10 bg-white border border-border rounded-xl max-w-[500px] sm:max-w-[1470px] m-auto '>
         <div className='md:w-2/3'>
-        <div className='p-5'>
+          <div className='p-3 sm:p-5'>
             <div className='text-lg text-secondary font-bold py-3 w-full border-b border-accent'>Items To Order</div>
-          
 
-          {/* mapping orrder items*/}
-          {cartItems.map((item, index) => (
-          <div key={index}>
-            <div className='flex justify-between items-center border-b border-border py-2'>
-              <div className='flex gap-2'>
-                <img src={item.image} alt={item.name} className='w-16 h-16 object-cover rounded' />
-                <div className='flex flex-col'>
-                  <h6 className='text-sm font-bold'>{item.name}</h6>
-                  <p className='text-sm'>Size: {item.size}</p>
-                  <p className='text-sm'>Color: {item.color}</p>
+
+            {/* mapping order items*/}
+            {cartItems.map((item, index) => (
+              <div key={index}>
+                <div className='flex justify-between items-center border-b border-border py-2'>
+                  <div className='flex gap-2'>
+                    <img src={item.image} alt={item.name} className='w-16 h-16 object-cover rounded' />
+                    <div className='flex flex-col'>
+                      <h6 className='text-sm font-bold'>{item.name}</h6>
+                      <p className='text-sm'>Size: {item.size}</p>
+                      <p className='text-sm'>Color: {item.color}</p>
+                    </div>
+                  </div>
+                  <div className='flex flex-col items-end w-1/6'>
+                    <p className='text-sm font-bold'>₦{item.price}</p>
+                    <p className='text-sm'>Qty: {item.qauntity}</p>
+                  </div>
                 </div>
               </div>
-              <div className='flex flex-col items-end w-1/6'>
-                <p className='text-sm font-bold'>₦{item.price}</p>
-                <p className='text-sm'>Qty: {item.qauntity}</p>
-              </div>
-            </div>
-          </div>
-          ))}
+            ))}
           </div>
           <div className='grid grid-cols-1 sm:grid-cols-2 justify-between w-full'>
             <div className='p-5 h-fit w-fit flex flex-col gap-2'>
-                <h6 className='text-lg font-bold py-3'>Billing Info <Link className='text-accent text-sm font-normal' to='/REACT-DUMMY/shipping-update' >(edit)</Link></h6>
-                <p className='text-sm'><span className='font-medium text-secondary'>Full Name:</span> <span className='tracking-widest'>Test Test</span></p>
-                <p className='text-sm'><span className='font-medium text-secondary'>Phone Number:</span> <span className='tracking-widest'>+1234567890</span></p>
-                <p className='text-sm'><span className='font-medium text-secondary'>Street Address:</span> <span className='tracking-widest'>123 Main St</span></p>
-                <p className='text-sm'><span className='font-medium text-secondary'>City:</span> <span className='tracking-widest'>New York</span> </p>
-                <p className='text-sm'><span className='font-medium text-secondary'>State:</span> <span className='tracking-widest'>NY</span></p>
-                <p className='text-sm'><span className='font-medium text-secondary'>Zip Code:</span> <span className='tracking-widest'>10001</span></p>
+              <h6 className='text-lg font-bold py-3'>Billing Info <Link className='text-accent text-sm font-normal' to='/REACT-DUMMY/shipping-update' >(edit)</Link></h6>
+              <p className='text-sm'><span className='font-medium text-secondary'>Full Name:</span> <span className='tracking-widest'>Test Test</span></p>
+              <p className='text-sm'><span className='font-medium text-secondary'>Phone Number:</span> <span className='tracking-widest'>+1234567890</span></p>
+              <p className='text-sm'><span className='font-medium text-secondary'>Street Address:</span> <span className='tracking-widest'>123 Main St</span></p>
+              <p className='text-sm'><span className='font-medium text-secondary'>City:</span> <span className='tracking-widest'>New York</span> </p>
+              <p className='text-sm'><span className='font-medium text-secondary'>State:</span> <span className='tracking-widest'>NY</span></p>
+              <p className='text-sm'><span className='font-medium text-secondary'>Zip Code:</span> <span className='tracking-widest'>10001</span></p>
             </div>
-              
+
             <div className='p-5 h-fit w-fit flex flex-col gap-2'>
-                <h6 className='text-lg font-bold py-3'>Shipping Info <Link className='text-accent text-sm font-normal' to='/REACT-DUMMY/shipping-update' >(edit)</Link></h6>
-                <p className='text-sm'><span className='font-medium text-secondary'>Full Name:</span> <span className='tracking-widest'>Test Test</span></p>
-                <p className='text-sm'><span className='font-medium text-secondary'>Phone Number:</span> <span className='tracking-widest'>+1234567890</span></p>
-                <p className='text-sm'><span className='font-medium text-secondary'>Street Address:</span> <span className='tracking-widest'>123 Main St</span></p>
-                <p className='text-sm'><span className='font-medium text-secondary'>City:</span> <span className='tracking-widest'>New York</span> </p>
-                <p className='text-sm'><span className='font-medium text-secondary'>State:</span> <span className='tracking-widest'>NY</span></p>
-                <p className='text-sm'><span className='font-medium text-secondary'>Zip Code:</span> <span className='tracking-widest'>10001</span></p>
+              <h6 className='text-lg font-bold py-3'>Shipping Info <Link className='text-accent text-sm font-normal' to='/REACT-DUMMY/shipping-update' >(edit)</Link></h6>
+              <p className='text-sm'><span className='font-medium text-secondary'>Full Name:</span> <span className='tracking-widest'>Test Test</span></p>
+              <p className='text-sm'><span className='font-medium text-secondary'>Phone Number:</span> <span className='tracking-widest'>+1234567890</span></p>
+              <p className='text-sm'><span className='font-medium text-secondary'>Street Address:</span> <span className='tracking-widest'>123 Main St</span></p>
+              <p className='text-sm'><span className='font-medium text-secondary'>City:</span> <span className='tracking-widest'>New York</span> </p>
+              <p className='text-sm'><span className='font-medium text-secondary'>State:</span> <span className='tracking-widest'>NY</span></p>
+              <p className='text-sm'><span className='font-medium text-secondary'>Zip Code:</span> <span className='tracking-widest'>10001</span></p>
             </div>
           </div>
         </div>
