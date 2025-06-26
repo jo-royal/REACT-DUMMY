@@ -1,7 +1,8 @@
-import React from 'react'
+
 import { useState, useEffect } from 'react'
 import { tokenAuthCheck } from '../services/authService'
 import { useNavigate } from 'react-router'
+import UserDashboard from '../components/userDashboard';
 
 export default function Dashboard() {
     const [authen, setAuthen] = useState(false);
@@ -23,7 +24,8 @@ export default function Dashboard() {
 
     return (
         <>
-            {authen ? <div> this is your dashboard</div> : <div>something wrong loging again</div>}
+            {authen ? <div>
+                <UserDashboard /></div> : <div>something wrong loging again</div>}
         </>
     )
 }

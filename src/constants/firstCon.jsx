@@ -1,4 +1,4 @@
-import { Gift, Gem, HandCoins, Percent } from "lucide-react";
+import { Gift, Gem, HandCoins, Percent, Instagram, Twitter, Facebook, Youtube } from "lucide-react";
 import productOne from "../assets/product-one.png";
 import springProduct from '../assets/spring product.png'
 
@@ -50,3 +50,23 @@ export const newArrivalProducts = [
     { name: "Product Six", price: "60,000", image: productOne },
 ];
 
+export const medias = [
+    { icons: <Instagram className="text-accent" strokeWidth={1.5} size={24} />, href: "/" },
+    { icons: <Twitter className="text-accent" strokeWidth={1.5} size={24} />, href: "/" },
+    { icons: <Facebook className="text-accent" strokeWidth={1.5} size={24} />, href: "/" },
+    { icons: <Youtube className="text-accent" strokeWidth={1.5} size={24} />, href: "/" }
+];
+
+export const quickLinks = [
+    { label: "Shop", href: "/REACT-DUMMY/shop" },
+    { label: "About ", href: "/REACT-DUMMY/checkout" },
+    { label: "Contacts", href: "/REACT-DUMMY/contacts" },
+    { label: "Login", href: "/REACT-DUMMY/login" },
+];
+
+export const careers = [
+    { label: "Sellers", href: "/REACT-DUMMY/shop" },
+    { label: "Models ", href: "/REACT-DUMMY/checkout" },
+    { label: "Manufacturer", href: "/REACT-DUMMY/contacts" },
+    { label: "Developers", href: "/REACT-DUMMY/login" },
+];
