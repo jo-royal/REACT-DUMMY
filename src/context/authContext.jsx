@@ -11,7 +11,7 @@ export const AuthProvider = ({ children }) => {
 
 
   const login = async (email, password) => {
-    const res = await API.post(loginURL, { email, password });
+    const res = await API.post(loginURL, { email, password }, { withCredentials: true });
     const token = res.data.access;
     setAccessToken(token);
     setIsAuthenticated(true);
