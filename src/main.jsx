@@ -4,31 +4,10 @@ import './index.css';
 import App from './App.jsx';
 
 
-async function prepare() {
-  if (import.meta.env.MODE === 'development') {
-    const { worker } = await import('./mocks/browser');
-    await worker.start({
-      serviceWorker: {
-        url: '/REACT-DUMMY/mockServiceWorker.js'   // <<< ADD THIS!
-      }
-    });
-  }
-}
-
-prepare().then(() => {
-  createRoot(document.getElementById('root')).render(
-    <StrictMode>
-      <App />
-    </StrictMode>,
-  );
-});
-
-
-
 //** uncomment this for production */ 
 
-// createRoot(document.getElementById('root')).render(
-//   <StrictMode>
-//     <App />
-//   </StrictMode>,
-// )
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+)
