@@ -13,29 +13,34 @@ import Payment from "./pages/payment";
 import Cart from "./pages/cart";
 import ProductDetails from "./pages/productDetails";
 import Dashboard from "./profile/dashboard";
-
-
+import { AuthProvider } from './context/authContext';
+import ProtectedRoute from "./components/protectedRoute";
 
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/REACT-DUMMY" element={< Index />} />
-        <Route path="/REACT-DUMMY/login" element={<Login />} />
-        <Route path="/REACT-DUMMY/register" element={< Register />} />
-        <Route path="/REACT-DUMMY/reset" element={<Reset />} />
-        <Route path="/REACT-DUMMY/code-confirmation" element={<CodeConfirmation />} />"
-        <Route path="/REACT-DUMMY/new-password" element={<NewPassword />} />
-        <Route path="/REACT-DUMMY/wishlist" element={< Wishlist />} />
-        <Route path="/REACT-DUMMY/shipping-update" element={< ShippingUpdate />} />
-        <Route path="/REACT-DUMMY/checkout" element={< Checkout />} />
-        <Route path="/REACT-DUMMY/payment" element={< Payment />} />
-        <Route path="/REACT-DUMMY/cart" element={< Cart />} />
-        <Route path="/REACT-DUMMY/shop" element={< Shop />} />
-        <Route path="/REACT-DUMMY/shop/details" element={< ProductDetails />} />
-        <Route path="/REACT-DUMMY/dashboard" element={<Dashboard />} />
-      </Routes>
-    </BrowserRouter>
+
+    <AuthProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/REACT-DUMMY" element={<Index />} />
+          <Route path="/REACT-DUMMY/login" element={<Login />} />
+          <Route path="/REACT-DUMMY/register" element={<Register />} />
+          <Route path="/REACT-DUMMY/reset" element={<Reset />} />
+          <Route path="/REACT-DUMMY/code-confirmation" element={<CodeConfirmation />} />
+          <Route path="/REACT-DUMMY/new-password" element={<NewPassword />} />
+          <Route path="/REACT-DUMMY/shop" element={<Shop />} />
+          <Route path="/REACT-DUMMY/shop/details" element={<ProductDetails />} />
+
+          {/* ✅ PROTECTED ROUTES BELOW */}
+          <Route path="/REACT-DUMMY/wishlist" element={<ProtectedRoute><Wishlist /></ProtectedRoute>} />
+          <Route path="/REACT-DUMMY/shipping-update" element={<ProtectedRoute><ShippingUpdate /></ProtectedRoute>} />
+          <Route path="/REACT-DUMMY/checkout" element={<ProtectedRoute><Checkout /></ProtectedRoute>} />
+          <Route path="/REACT-DUMMY/payment" element={<ProtectedRoute><Payment /></ProtectedRoute>} />
+          <Route path="/REACT-DUMMY/cart" element={<ProtectedRoute><Cart /></ProtectedRoute>} />
+          <Route path="/REACT-DUMMY/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
+        </Routes>
+      </BrowserRouter>
+    </AuthProvider>
   )
 }

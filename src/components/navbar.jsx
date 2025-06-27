@@ -118,7 +118,7 @@ export default function Navbar() {
                       <li key={category.id} onClick={() => handleCategoryClickDesktop(category)} className="w-full hover:text-accent bg-white rounded p-2 h-15 cursor-pointer">
                         <button className='flex justify-between items-center w-full h-full'>
                           <div className='flex gap-3 h-full items-center'>
-                            <img className='h-full w-auto' src={category.img} alt={category.name} />
+                            <img className='h-full w-auto' src={category.image} alt={category.name} />
                             <p>{category.name}</p>
                           </div>
                           <p className='w-full text-end'>&gt;</p>
@@ -146,7 +146,7 @@ export default function Navbar() {
                     <li key={index} className="w-full hover:text-accent bg-white rounded p-2 h-15 cursor-pointer">
                       <button className='flex justify-between items-center w-full h-full'>
                         <div className='flex gap-3 h-full items-center'>
-                          <img className='h-full w-auto' src={category.img} alt={category.name} />
+                          <img className='h-full w-auto' src={category.image} alt={category.name} />
                           <p>{category.name}</p>
                         </div>
                         <p className='w-full text-end'>&gt;</p>
@@ -211,7 +211,7 @@ export default function Navbar() {
                   <div >
                     {item.name}
                   </div>
-                  <img className='h-full w-auto' src={item.img} alt={item.name} />
+                  <img className='h-full w-auto' src={item.image} alt={item.name} />
                 </li>
               ))}
             </ul>
@@ -233,7 +233,7 @@ export default function Navbar() {
                 <li key={index} className='bg-white rounded border-b border-bg-shop p-2 h-15 w-full'>
                   <button className='flex justify-between items-center w-full h-full'>
                     <div className='flex gap-3 h-full'>
-                      <img className='h-full w-auto' src={subItem.img} alt={subItem.name} />
+                      <img className='h-full w-auto' src={subItem.image} alt={subItem.name} />
                       <p>{subItem.name}</p>
                     </div>
                     <p className='w-full text-end'>&gt;</p>

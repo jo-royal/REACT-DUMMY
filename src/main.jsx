@@ -4,7 +4,6 @@ import './index.css';
 import App from './App.jsx';
 
 
-//** uncomment this for production */ 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
