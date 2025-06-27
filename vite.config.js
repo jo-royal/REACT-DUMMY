@@ -11,9 +11,6 @@ export default defineConfig({
   server: { // <<< for mock data
     headers: {
       'Service-Worker-Allowed': '/',   // <<< ADD THIS!
-    },
-    allowedHosts: [
-      'localhost',
-    ],
+    }
   }
 })
